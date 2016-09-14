@@ -1,0 +1,66 @@
+doctype html
+html(lang='en-US')
+  head
+    meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="shortcut icon" href="//www.ibm.com/favicon.ico")
+    meta(name="geo.country" content="US")
+    meta(name="dcterms.rights" content="© Copyright IBM Corp. 2016")
+    meta(name="dcterms.date" content="REPLACE")
+    meta(name="description" content="REPLACE")
+    meta(name="keywords" content="REPLACE")
+    meta(name="robots" content="index, follow")
+    meta(name="generator" content="IBM Northstar Template Generator 2.0")
+    title= title
+    
+    script.
+      digitalData = {
+        "page": {
+          "category": {
+            "primaryCategory": "REPLACE"
+          },
+          "pageInfo": {
+            "effectiveDate": "REPLACE",
+            "expiryDate": "REPLACE",
+            "language": "en-US",
+            "publishDate": "REPLACE",
+            "publisher": "IBM Corporation",
+            "version": "v18",
+            "pageID": "REPLACE",
+            "ibm": {
+              "contentDelivery": "HTML",
+              "contentProducer": "IBM Northstar Template Generator 2.0",
+              "country": "US",
+              "industry": "REPLACE",
+              "owner": "REPLACE",
+              "siteID": "REPLACE",
+              "subject": "REPLACE",
+              "type": "REPLACE"
+            }
+          }
+        }
+      }
+    script(src="//1.www.s81c.com/common/stats/ida_stats.js")
+    link(href="//1.www.s81c.com/common/v18/css/www.css" rel="stylesheet")
+    link(href="//1.www.s81c.com/common/v18/css/forms.css" rel="stylesheet")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="//1.www.s81c.com/common/v18/js/www.js")
+    script(src="//1.www.s81c.com/common/v18/js/forms.js")
+    script(type="text/javascript").
+      IBMCore.common.util.config.set({
+        "masthead": {
+          "type": "alternate"
+        },
+        "footer": {
+          "type": "alternate",
+          "socialLinks": {
+            "enabled": false
+          }
+        }
+      })
+
+  body#ibm-com.ibm-type
+    block content
+    
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+    script(src="./javascripts/main.js")

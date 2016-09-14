@@ -1,0 +1,111 @@
+extends layout
+
+block content
+  #ibm-top.ibm-landing-page
+
+    //MASTHEAD_BEGIN
+    #ibm-masthead(role="banner" aria-label="IBM")
+      #ibm-mast-options
+        ul(role="toolbar" aria-labelledby="ibm-masthead")
+          li#imb-geo(role="presentation")
+            a(href="//www.ibm.com/planetwide/select/selector.html") United States
+      #ibm-universal-nav
+        #ibm-home
+          a(href="//www.ibm.com/us-en/") IBM®
+        ul#ibm-menu-links(role="toolbar" aria-label="Site map")
+          li
+            a(href="//www.ibm.com/sitemap/us/en/") Site map
+        #ibm-search-module(role="search" aria-labelledby="ibm-masthead")
+          form#ibm-search-form(action="//www.ibm.com/Search/" method="get")
+            p
+              label(for="q")
+                span.ibm-access Search
+              input#q(type="text" maxlength="100" value="" name="q")
+              input(type="hidden" value="17" name="v")
+              input(type="hidden" value="utf" name="en")
+              input(type="hidden" value="en" name="lang")
+              input(type="hidden" value="us" name="cc")
+              input#ibm-search.ibm-btn-search(type="submit" value="Submit")
+              //MASTHEAD_END
+    #ibm-content-wrapper
+      header(role="banner" aria-labelledby="ibm-pagetitle-h1")
+        //LEADSPACE_BEGIN
+        #ibm-leadspace-head.ibm-background-teal-core.ibm-alternate.ibm-alternate-background(style="")
+          #ibm-leadspace-body
+            .ibm-columns
+              .ibm-col-1-1
+                h1#ibm-pagetitle-h1.ibm-h1.ibm-light My Learning
+                h2.ibm-padding-top-30 Learn More
+                //LEADSPACE_END
+
+      main(role="main" aria-labelledby="ibm-pagetitle-h1")
+        #ibm-pcon
+          #ibm-content
+            #ibm-content-body
+              #ibm-content-main
+                //-ONE COLUMN TOP CONTENT CALL TO ACTION
+                .ibm-columns
+                  .ibm-col-1-1
+                    p We're glad you're excited to learn more about IBM's My Learning platform. Sign up here to be the first to know when more information is available.
+                    //-img(src="http://www.ibm.com/middleware/img/connectivity/connectivity-and-integration.jpg" width="100%")
+                //-TWO COLUMN BUTTON ACTIONS
+                .ibm-columns
+                  .ibm-col-2-1
+                    p.ibm-button-link.ibm-center
+                      a.ibm-btn-pri.ibm-btn-blue-50(href="#") I'm an IBMer
+                  .ibm-col-2-1
+                    p.ibm-center
+                      button.ibm-btn-pri.ibm-btn-blue-50.future-customer(type="button") I'm a future customer
+                    //- ------
+                    //- FORM 
+                    //- ------
+                    form(method="post" action="/submit" class=(errors)? 'signup-form ibm-column-form form-errors' : 'signup-form ibm-column-form')
+                      //- CUSTOMER NAME
+                      p
+                        label(for="customerName") Name:
+                          span.ibm-required  *
+                        span
+                          input#customerName(type="text" size="40" name="customerName" value=(nameVal == null ? "" : nameVal) class=(errorName == true? 'ibm-field-error' : ''))
+                        if errors
+                          each val in errors
+                            if val.param == "customerName"
+                              span.ibm-item-note.ibm-alert-link #{val.msg}.
+                      //- CUSTOMER EMAIL
+                      p
+                        label(for="customerEmail") Email:
+                          span.ibm-required  *
+                        span
+                          input#customerEmail(type="email" size="40" name="customerEmail" value=(emailVal == null ? "" : emailVal) class=(errorEmail == true? 'ibm-field-error' : ''))
+                        if errorEmail == true
+                          each val in errors 
+                            if val.param == "customerEmail"
+                              span.ibm-item-note.ibm-alert-link #{val.msg}.
+                      //- CUSTOMER COMPANY
+                      p
+                        label(for="customerCompany") Company Name:
+                        span
+                          input#customerCompany(type="text" size="40" name="customerCompany" value=(companyVal == null ? '' : companyVal))
+                      //- CUSTOMER PHONE
+                      p
+                        label(for="customerPhone") Phone Number:
+                        span
+                          input#customerPhone(type="text" size="40" name="customerPhone" value=(phoneVal == null ? '' : phoneVal))
+                      //- SUBMIT BUTTON
+                      p
+                        button.ibm-btn-pri.ibm-btn-blue-50(type="submit") Submit
+
+    //FOOTER_BEGIN
+    #ibm-footer-module
+    footer(role="contentinfo" aria-label="IBM")
+      #ibm-footer
+        h2.ibm-access Footer links
+        ul
+          li
+            a(href="//www.ibm.com/contact/us/en/") Contact
+          li
+            a(href="//www.ibm.com/privacy/us/en/") Privacy
+          li
+            a(href="//www.ibm.com/legal/us/en/") Terms of use
+          li
+            a(href="//www.ibm.com/accessibility/us/en/") Accessibility
+            //FOOTER_END
