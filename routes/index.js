@@ -89,7 +89,11 @@ router.post('/submit', function(req, res, next) {
     //mailOptions contains the email itself
     var mailOptions = {
       from: 'IBM MyLearning <mylearning@bluemix.com>',
+<<<<<<< HEAD
       to: 'vivch3n@gmail.com',
+=======
+      to: 'tortilaman@gmail.com',
+>>>>>>> 3f41fb43e9f1c14a1a97d985cfaa7187e583c07e
       subject: 'IBM MyLearning Registration',
       text: 'Someone new has expressed interest in My Learning. Their name is: ' + req.body.customerName + ', email is: ' + req.body.customerEmail + ', company is: ' + req.body.customerCompany + ', phone number is: ' + req.body.customerPhone + '.',
       html: '<p>Someone new has expressed interest in My Learning. Details are:</p><ul><li>Name: '+req.body.customerName+'</li><li>Email: '+req.body.customerEmail+'</li><li>Company: ' +req.body.customerCompany + '</li><li>Phone: '+'</li></ul>'
