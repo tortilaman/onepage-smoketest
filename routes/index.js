@@ -6,9 +6,10 @@ var router = express.Router();
 **  HOMEPAGE
 ********************/
 router.get('/', function(req,res,next) {
+  //Sending all flag values to the template
   res.render('index', {
     title: 'IBM My Learning',
-    success: false,
+    success: req.session.success,
     errors: req.session.errors,
     errorName: req.session.errorName,
     errorEmail: req.session.errorEmail,
@@ -22,44 +23,61 @@ router.get('/', function(req,res,next) {
   req.session.success = null;
   req.session.errorName = null;
   req.session.errorEmail = null;
-  req.session.nameValue = null;
-  req.session.emailValue = null;
-  req.session.companyValue = null;
-  req.session.phoneValue = null;
 });
 
 /********************
 **  FORM VALIDATION
 ********************/
+//The form submit action goes to /submit, so handle the post request at this url
 router.post('/submit', function(req, res, next) {
+  //Check validity of form fields
   req.check('customerName', 'Name is required').notEmpty();
   req.check('customerEmail', 'An email is required').notEmpty();
   req.check('customerEmail', 'Invalid email address').isEmail();
 
+  //Set session variables to value of form fields
   req.session.nameValue = req.body.customerName;
   req.session.emailValue = req.body.customerEmail;
   req.session.companyValue = req.body.customerCompany;
   req.session.phoneValue = req.body.customerPhone;
 
+  //Clear error flags so previous submissions don't affect current submission
+  req.session.errorName = null;
+  req.session.errorEmail = null;
+
+
   var errors = req.validationErrors();
+  //There are validation errors, take care of it.
   if (errors) {
     req.session.errors = errors;
-    req.session.success = false;
+    req.session.success = false;//unused
+    //Clear error flags so previous submissions don't affect current submission
+    // req.session.errorName = null;
+    // req.session.errorEmail = null;
     for ( var value in errors) {
+      //Log validation errors to node console
+      console.log("Error in element: "+errors[value].param+", message is: "+errors[value].msg);
+      //Update error flags for fields being validated and print to node console
       if (errors[value].param == "customerName") {
         req.session.errorName = true;
+        console.log("errorName = true");
       } else if (errors[value].param == "customerEmail") {
         req.session.errorEmail = true;
+        console.log("errorEmail = true");
       }
     }
+  //No errors, send data via email.
   } else {
     req.session.success = true;
-    req.session.errorName = null;
-    req.session.errorEmail = null;
+    console.log("No Errors");
+    // req.session.errorName = null;
+    // req.session.errorEmail = null;
 
     /********************
     **  EMAIL
     ********************/
+
+    //The transporter contains sender login info
     var transporter = nodemailer.createTransport({
       service: 'Gmail',
       auth: {
@@ -68,6 +86,7 @@ router.post('/submit', function(req, res, next) {
       }
     });
 
+    //mailOptions contains the email itself
     var mailOptions = {
       from: 'IBM MyLearning <mylearning@bluemix.com>',
       to: 'tortilaman@gmail.com',
@@ -76,6 +95,7 @@ router.post('/submit', function(req, res, next) {
       html: '<p>Someone new has expressed interest in My Learning. Details are:</p><ul><li>Name: '+req.body.customerName+'</li><li>Email: '+req.body.customerEmail+'</li><li>Company: ' +req.body.customerCompany + '</li><li>Phone: '+'</li></ul>'
     };
 
+    //Actually sending the email
     transporter.sendMail(mailOptions, function(error, info) {
       if(error) {
         console.log(error);
@@ -84,6 +104,7 @@ router.post('/submit', function(req, res, next) {
       }
     });
   }
+  //Redirect user from '/submit' to '/'.
   res.redirect('/');
 });
 

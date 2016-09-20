@@ -56,6 +56,11 @@ block content
                   .ibm-col-2-1
                     p.ibm-center
                       button.ibm-btn-pri.ibm-btn-blue-50.future-customer(type="button") I'm a future customer
+                    //- SUCCESS MESSAGE 
+                    if success == true
+                      .notice-success
+                        p.
+                          Thanks for expressing interest. We'll send you an email when there's more information available.
                     //- ------
                     //- FORM 
                     //- ------
@@ -66,7 +71,7 @@ block content
                           span.ibm-required  *
                         span
                           input#customerName(type="text" size="40" name="customerName" value=(nameVal == null ? "" : nameVal) class=(errorName == true? 'ibm-field-error' : ''))
-                        if errors
+                        if errorName == true
                           each val in errors
                             if val.param == "customerName"
                               span.ibm-item-note.ibm-alert-link #{val.msg}.

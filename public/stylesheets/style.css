@@ -1,6 +1,7 @@
-.signup-form {
-  display: none;
-}
-.form-errors {
-  display: block;
-}
+.signup-form { display: none; }
+
+.form-errors { display: block; }
+
+.notice-success { background: #2D660A; padding: 1em; color: white; }
+
+/*# sourceMappingURL=style.css.map */
