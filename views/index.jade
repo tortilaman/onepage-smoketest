@@ -43,10 +43,13 @@ block content
               .ibm-columns
                 .ibm-col-1-1.c-arrange.c--space-between
                   div
-                    h1#ibm-pagetitle-h1.ibm-h1.ibm-light Your Learning
-                    p.c-section No matter the style of education you want, or the pace, you can find and keep track of it on Your Learning. And with our exceptional mobile capabilities, you can learn anytime, anywhere.
-                    
+                    div.c-arrange.c--align-center
+                      img.c-logo.u-margin-top-md(src="../svg/yl-banner-trimmed.svg")
+                      //- h1#ibm-pagetitle-h1.ibm-h1.ibm-light Your Learning
+                    p.u-margin-top-md.c-section No matter the style of education you want, or the pace, you can find and keep track of it on Your Learning. And with our exceptional mobile capabilities, you can learn anytime, anywhere.
+                    //- img.c-logo.ibm-padding-top-30(src="../svg/YL_logo_noBG.svg")
                     h2 Learn More
+                    
                   //- div
                     //- img.c-logo.ibm-padding-top-30(src="../svg/YL_logo_noBG.svg")
                   
@@ -60,8 +63,9 @@ block content
                 //-ONE COLUMN TOP CONTENT CALL TO ACTION
                 .ibm-columns
                   .ibm-col-1-1
-                    p.ibm-h4 Your Learning is IBM's digital learning platform, personalized with a built-in sense-and-respond cognitive capability that recommends learning for you and understands what you like over time. Professional development and education – is in one place, built solely on IBM technology including Bluemix, Cloudant, Softlayer, DB2 and more.
-                    h2#ibm-pagetitle-h2.ibm-h2.u-margin-top-lg.u-text-align-center.u-text-capitalize What will you learn today?
+                    h2#ibm-pagetitle-h2.ibm-h2.u-margin-top-lg.u-margin-bottom-md.u-text-align-center.u-text-capitalize What will you learn today?
+                    p.ibm-h5 Your Learning is IBM's digital learning platform, personalized with a built-in sense-and-respond cognitive capability that recommends learning for you and understands what you like over time. Professional development and education – in one place, built solely on IBM technology including Bluemix, Cloudant, Softlayer, DB2 and more.
+                    
                     //-img(src="http://www.ibm.com/middleware/img/connectivity/connectivity-and-integration.jpg" width="100%")
                 //-TWO COLUMN BUTTON ACTIONS
                 .ibm-columns
@@ -154,6 +158,7 @@ block content
                       p.u-text-align-center
                         button.ibm-btn-pri.ibm-btn-blue-50(type="submit") Submit
 
+    
     //FOOTER_BEGIN
     #ibm-footer-module
     footer(role="contentinfo" aria-label="IBM")
@@ -169,3 +174,5 @@ block content
           li
             a(href="//www.ibm.com/accessibility/us/en/") Accessibility
             //FOOTER_END
+            
+  
