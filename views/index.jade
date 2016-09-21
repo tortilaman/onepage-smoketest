@@ -17,7 +17,7 @@ block content
             li.c-list__item
               a(href="#") Log in
             li.c-list__item
-              a(href="#") Learn More
+              a.js-learn-more(href="") Learn More
               
         ul#ibm-menu-links(role="toolbar" aria-label="Site map")
           li
@@ -47,8 +47,8 @@ block content
                     p.c-section No matter the style of education you want, or the pace, you can find and keep track of it on Your Learning. And with our exceptional mobile capabilities, you can learn anytime, anywhere.
                     
                     h2 Learn More
-                  div
-                    img.c-logo.ibm-padding-top-30(src="../svg/YL_logo_noBG.svg")
+                  //- div
+                    //- img.c-logo.ibm-padding-top-30(src="../svg/YL_logo_noBG.svg")
                   
                   //LEADSPACE_END
 
@@ -60,8 +60,8 @@ block content
                 //-ONE COLUMN TOP CONTENT CALL TO ACTION
                 .ibm-columns
                   .ibm-col-1-1
-                    p Your Learning is IBM's digital learning platform, personalized with a built-in sense-and-respond cognitive capability that recommends learning for you and understands what you like over time. Professional development and education – is in one place, built solely on IBM technology including Bluemix, Cloudant, Softlayer, DB2 and more.
-                    h2#ibm-pagetitle-h2.ibm-h2.u-margin-top-lg.u-text-align-center What will you learn today?
+                    p.ibm-h4 Your Learning is IBM's digital learning platform, personalized with a built-in sense-and-respond cognitive capability that recommends learning for you and understands what you like over time. Professional development and education – is in one place, built solely on IBM technology including Bluemix, Cloudant, Softlayer, DB2 and more.
+                    h2#ibm-pagetitle-h2.ibm-h2.u-margin-top-lg.u-text-align-center.u-text-capitalize What will you learn today?
                     //-img(src="http://www.ibm.com/middleware/img/connectivity/connectivity-and-integration.jpg" width="100%")
                 //-TWO COLUMN BUTTON ACTIONS
                 .ibm-columns
@@ -151,7 +151,7 @@ block content
                         span
                           input#customerPhone(type="text" size="40" name="customerPhone" value=(phoneVal == null ? '' : phoneVal))
                       //- SUBMIT BUTTON
-                      p
+                      p.u-text-align-center
                         button.ibm-btn-pri.ibm-btn-blue-50(type="submit") Submit
 
     //FOOTER_BEGIN
