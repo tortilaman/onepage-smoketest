@@ -19,3 +19,9 @@
 .c-section {
   width: 60%;
 }
+
+
+.black-gradient {
+    background: linear-gradient(to right, rgba(0,0,0,0.85) 0, transparent 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
+}

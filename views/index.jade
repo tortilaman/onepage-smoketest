@@ -17,7 +17,8 @@ block content
             li.c-list__item
               span Log in
             li.c-list__item
-              span Learn more
+              span Learn More
+              
         ul#ibm-menu-links(role="toolbar" aria-label="Site map")
           li
             a(href="//www.ibm.com/sitemap/us/en/") Site map
@@ -36,19 +37,20 @@ block content
     #ibm-content-wrapper
       header(role="banner" aria-labelledby="ibm-pagetitle-h1")
         //LEADSPACE_BEGIN
-        #ibm-leadspace-head.ibm-background-teal-core.ibm-alternate.ibm-alternate-background(style="")
-          #ibm-leadspace-body
-            .ibm-columns
-              .ibm-col-1-1.c-arrange.c--space-between
-                div
-                  h1#ibm-pagetitle-h1.ibm-h1.ibm-light Your Learning
-                  p.c-section No matter the style of education you want, or the pace, you can find and keep track of it on Your Learning. And with our exceptional mobile capabilities, you can learn anytime, anywhere.
+        #ibm-leadspace-head.ibm-background-teal-core.ibm-alternate.c-background.ibm-alternate-background(style="")
+          div.black-gradient
+            #ibm-leadspace-body
+              .ibm-columns
+                .ibm-col-1-1.c-arrange.c--space-between
+                  div
+                    h1#ibm-pagetitle-h1.ibm-h1.ibm-light Your Learning
+                    p.c-section No matter the style of education you want, or the pace, you can find and keep track of it on Your Learning. And with our exceptional mobile capabilities, you can learn anytime, anywhere.
+                    
+                    h2 Learn More
+                  div
+                    img.c-logo.ibm-padding-top-30(src="../svg/YL_logo_noBG.svg")
                   
-                  h2 Learn More
-                div
-                  img.c-logo.ibm-padding-top-30(src="../svg/YL_logo_noBG.svg")
-                
-                //LEADSPACE_END
+                  //LEADSPACE_END
 
       main(role="main" aria-labelledby="ibm-pagetitle-h1")
         #ibm-pcon
@@ -68,11 +70,13 @@ block content
                       img.u-text-ibm-blue.u-display-inline-block(src="../svg/get-information_32.svg")
                       div.u-text-align-center
                         a.c-button.ibm-btn-pri.ibm-btn-blue-50(href="#") I'm an IBMer
+                        small.u-margin-top-sm.u-display-block IBMers log into Your Learning
                   .ibm-col-2-1
                     p.ibm-center
                       img.u-text-ibm-blue.u-display-inline-block(src="../svg/get-information_32.svg")
                       div.u-text-align-center
                         button.c-button.ibm-btn-pri.ibm-btn-blue-50.future-customer(type="button") I'm a future customer
+                        small.u-margin-top-sm.u-display-block Get more information about the Your Learning Platform
                     //- SUCCESS MESSAGE 
                     if success == true
                       .notice-success

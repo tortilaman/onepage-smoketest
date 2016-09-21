@@ -4,8 +4,8 @@ html, body {
   height: 100%;
   width: 100%; }
 
-html {
-  background: url(../images/stockphoto.jpg) no-repeat center center fixed;
+.c-background {
+  background: url(../images/stockphoto_tint.png) no-repeat center center fixed;
   background-size: cover; }
 
 body {
