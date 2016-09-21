@@ -1,0 +1,34 @@
+#ibm-home {
+  margin-left: 0;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.c-button {
+  width: 100%;
+
+  max-width: 250px;
+}
+
+.u-text-ibm-blue {
+  color: #4178be;
+}
+
+.c-section {
+  width: 60%;
+}
+
+.black-gradient {
+    background: linear-gradient(to right, rgba(0,0,0,0.85) 0, transparent 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
+}
+
+.ibm-btn-pri img, .ibm-btn-pri span {
+  vertical-align: middle;
+}
+
+.ibm-btn-pri img {
+  margin-right: 0.4em;
+}

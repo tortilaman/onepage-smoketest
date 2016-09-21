@@ -12,7 +12,7 @@ html(lang='en-US')
     meta(name="robots" content="index, follow")
     meta(name="generator" content="IBM Northstar Template Generator 2.0")
     title= title
-    
+
     script.
       digitalData = {
         "page": {
@@ -62,7 +62,50 @@ html(lang='en-US')
       })
 
   body#ibm-com.ibm-type
-    block content
-    
+    #ibm-top.ibm-landing-page
+      //MASTHEAD_BEGIN
+      #ibm-masthead(role="banner" aria-label="IBM")
+        #ibm-mast-options
+          ul(role="toolbar" aria-labelledby="ibm-masthead")
+            li#imb-geo(role="presentation")
+              a(href="//www.ibm.com/planetwide/select/selector.html") United States
+        #ibm-universal-nav
+          #ibm-home.c-arrange.c--space-between
+            a(class="c-arrange__item" href="//www.ibm.com/us-en/") IBM®
+
+          ul#ibm-menu-links(role="toolbar" aria-label="Site map")
+            li
+              a(href="//www.ibm.com/sitemap/us/en/") Site map
+          #ibm-search-module(role="search" aria-labelledby="ibm-masthead")
+            form#ibm-search-form(action="//www.ibm.com/Search/" method="get")
+              p
+                label(for="q")
+                  span.ibm-access Search
+                input#q(type="text" maxlength="100" value="" name="q")
+                input(type="hidden" value="17" name="v")
+                input(type="hidden" value="utf" name="en")
+                input(type="hidden" value="en" name="lang")
+                input(type="hidden" value="us" name="cc")
+                input#ibm-search.ibm-btn-search(type="submit" value="Submit")
+                //MASTHEAD_END
+      #ibm-content-wrapper
+        header(role="banner" aria-labelledby="ibm-pagetitle-h1")
+          //LEADSPACE_BEGIN
+          #ibm-leadspace-head.ibm-background-teal-core.ibm-alternate.c-background.ibm-alternate-background(style="")
+            div.black-gradient
+              #ibm-leadspace-body
+                .ibm-columns
+                  .ibm-col-1-1.c-arrange.c--space-between
+                    div
+                      h1#ibm-pagetitle-h1.ibm-h1.ibm-light Your Learning
+                      p.c-section No matter the style of education you want, or the pace, you can find and keep track of it on Your Learning. And with our exceptional mobile capabilities, you can learn anytime, anywhere.
+
+                      h2 Learn More
+                    div
+                      img.c-logo.ibm-padding-top-30(src="../svg/YL_logo_noBG.svg")
+
+                    //LEADSPACE_END
+        block content
+
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
     script(src="./javascripts/main.js")
