@@ -143,4 +143,10 @@ form input[type="submit"]:hover { background: #109f67; }
 
 .notice-success { background: #2D660A; padding: 1em; color: white; }
 
+.icon-font { font-family: "icons-ibm-v7"; }
+
+.bee-icon-link::before { content: '\f10C'; }
+
+.info-icon-link::before { content: '\f144'; }
+
 /*# sourceMappingURL=style.css.map */

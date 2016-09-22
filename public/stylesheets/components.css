@@ -5,7 +5,7 @@ html, body {
   width: 100%; }
 
 .c-background {
-  background: url(../images/stockphoto_tint.png) no-repeat center center fixed;
+  background: url(../images/stockphoto_tifnt.png) no-repeat center center fixed;
   background-size: cover; }
 
 body {
@@ -31,7 +31,7 @@ p {
   margin-left: 16px; }
 
 .c-logo {
-  width: 120px;
+  width: 140px;
   height: auto; }
 
 .c-ibm-logo {

@@ -1,6 +1,6 @@
 #ibm-home {
   margin-left: 0;
-  width: 100%;
+  float: none;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -12,8 +12,8 @@
   max-width: 250px;
 }
 
-.u-text-ibm-blue {
-  color: #4178be;
+.u-fill-ibm-blue {
+  fill: #4178be;
 }
 
 .c-section {
@@ -21,7 +21,11 @@
 }
 
 
-.black-gradient {
+.c-black-gradient {
     background: linear-gradient(to right, rgba(0,0,0,0.85) 0, transparent 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
+}
+
+.u-text-size-smaller {
+  font-size: smaller;
 }
