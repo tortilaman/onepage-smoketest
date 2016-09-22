@@ -6,7 +6,7 @@ html, body {
 }
 
 .c-background {
-  background: url(../images/stockphoto_tint.png) no-repeat center center fixed;
+  background: url(../images/stockphoto_tint.png) no-repeat;
   background-size: cover;
 }
 
@@ -42,7 +42,8 @@ p {
 }
 
 .c-logo {
-  width: 120px;
+  width: 60%;
+  max-width: 400px;
   height: auto;
 }
 
@@ -171,6 +172,10 @@ p {
 }
 
 .u-margin-bottom-lg {
+  margin-bottom: 16px;
+}
+
+.u-margin-bottom-lg {
   margin-bottom: 32px;
 }
 
@@ -180,6 +185,10 @@ p {
 
 .u-margin-top-sm {
   margin-top: 8px;
+}
+
+.u-margin-top-md {
+  margin-top: 16px;
 }
 
 .u-margin-top-lg {
