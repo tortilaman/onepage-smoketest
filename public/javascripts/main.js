@@ -1,17 +1,14 @@
 var form = $('.signup-form'),
-    button = $('.future-customer'),
-    learnmore = $('.js-learn-more');
-
-button.on('click', function() {
-  form.show(600);
-
-  if ($(this).attr('class') === 'js-learn-more') {
-    console.log('clicked on a learn more link');
-  }
-
-});
+    // button = $('.future-customer'),
+    learnmore = $(' .js-future-customer, .js-learn-more');
 
 learnmore.on('click', function() {
-  $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+  // debugger;
+  if ($(this).hasClass('js-learn-more')) {
+    $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+    console.log('matches js-learn-more!!!!');
+  }
+
   form.show(600);
+
 });
