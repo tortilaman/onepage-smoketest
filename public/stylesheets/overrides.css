@@ -7,9 +7,12 @@
 
 
 .c-button {
-  width: 100%;
 
   max-width: 250px;
+}
+
+.c-button.c--wide {
+  width: 100%;
 }
 
 .u-fill-ibm-blue {
