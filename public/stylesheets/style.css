@@ -1,6 +1,6 @@
-#ibm-home { margin-left: 0; width: 100%; padding-left: 20px; padding-right: 20px; }
+#ibm-home { margin-left: 0; padding-left: 20px; padding-right: 20px; }
 
-.c-button { width: 100%; max-width: 250px; }
+.c-button { max-width: 250px; }
 
 .u-text-ibm-blue { color: #4178be; }
 

@@ -5,15 +5,13 @@ var form = $('.signup-form'),
 button.on('click', function() {
   form.show(600);
 
+  if ($(this).attr('class') === 'js-learn-more') {
+    console.log('clicked on a learn more link');
+  }
+
 });
 
 learnmore.on('click', function() {
-  console.log($(this).attr('class'));
-
+  $("html, body").animate({ scrollTop: $(document).height() }, "slow");
   form.show(600);
-
-  // if ($(this).attr('class') === 'js-learn-more') {
-  //   window.scrollTo(0,document.body.scrollHeight);
-  //   console.log('clicked learn more');
-  // }
 });
