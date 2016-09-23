@@ -27,13 +27,15 @@ block content
                   small.u-margin-top-sm.u-display-block Get more information about the Your Learning Platform
                 //- SUCCESS MESSAGE
                 if success == true
-                  .notice-success
+                  .notice-success.u-text-align-center.u-margin-top-md
                     img.u-text-ibm-blue.u-display-inline-block(src="../svg/confirm_128.svg")
                     p.
                       Thanks for expressing interest. We'll send you an email when there's more information available.
                 //- ------
                 //- FORM
                 //- ------
+                //- a.ibm-btn-pri.ibm-btn-blue-50.arrow-down-link
+      
                 form.u-margin-top-lg(method="post" action="/submit" class=(errors)? 'signup-form ibm-column-form form-errors' : 'signup-form ibm-column-form')
                   //- CUSTOMER NAME
                   p

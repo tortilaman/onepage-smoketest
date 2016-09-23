@@ -1,6 +1,9 @@
 #ibm-home {
   margin-left: 0;
   padding-left: 20px;
+}
+
+#ibm-universal-nav {
   padding-right: 20px;
 }
 
@@ -16,7 +19,7 @@
   width: 60%;
 }
 
-.black-gradient {
+.c-black-gradient {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0, transparent 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
 }
@@ -72,7 +75,8 @@ p {
 }
 
 .c-logo {
-  width: 120px;
+  width: 60%;
+  max-width: 400px;
   height: auto;
 }
 
@@ -208,6 +212,10 @@ p {
 
 .u-margin-top-sm {
   margin-top: 8px;
+}
+
+.u-margin-top-md {
+  margin-top: 16px;
 }
 
 .u-margin-top-lg {
@@ -346,4 +354,8 @@ form input[type="submit"]:hover {
 
 .info-icon-link::before {
   content: '\f144';
+}
+
+.arrow-down-link::before {
+  content: '\f117';
 }
