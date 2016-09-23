@@ -32,6 +32,12 @@
   margin-right: 0.4em;
 }
 
+.t-index__icon-container {
+  height: 50px;
+  width: 50px;
+  left: 50%;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -253,6 +259,10 @@ p {
   position: relative;
 }
 
+.u-position-absolute {
+  position: absolute;
+}
+
 .u-text-white {
   color: #fff;
 }
@@ -364,6 +374,7 @@ form input[type="submit"]:hover {
 .arrow-down-link::before {
   content: '\f117';
   position: relative;
+  left: -50%;
 }
 
 .confirm-circle-link::before {

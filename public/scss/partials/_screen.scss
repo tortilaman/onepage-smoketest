@@ -27,11 +27,13 @@
 .arrow-down-link::before {
   content: '\f117';
   position: relative;
+  left: -50%;
 }
 
 .confirm-circle-link::before {
   content: '\f123';
   position: relative;
+
 }
 
 .arrow {
