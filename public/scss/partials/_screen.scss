@@ -26,4 +26,9 @@
 
 .arrow-down-link::before {
   content: '\f117';
+  position: relative;
+}
+
+.confirm-circle::before {
+  content: '\f123'
 }

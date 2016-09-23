@@ -1,6 +1,12 @@
-var success = $('.notice-success');
+// var success = $('.notice-success');
 
-// success.hide();
+//
+// A $( document ).ready() block.
+// $( document ).ready(function() {
+//     console.log( "ready!" );
+//     success.hide();
+// });
+
 
 var form = $('.signup-form'),
     learnmore = $(' .js-future-customer, .js-learn-more');

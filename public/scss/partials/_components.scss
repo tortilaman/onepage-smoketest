@@ -23,6 +23,7 @@ p {
   display: inline-block;
   list-style-type: none;
   padding-left: 0;
+  padding-bottom: 0;
 
   .c-list__item {
     display: inline;
@@ -31,7 +32,7 @@ p {
 
   &.c--border .c-list__item + .c-list__item {
     border-left: 1px solid;
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(0, 0, 0, 0.2);
     padding-left: 16px;
   }
 }
@@ -173,6 +174,11 @@ p {
 .u-margin-bottom-lg {
   margin-bottom: 32px;
 }
+
+.u-margin-bottom-md {
+  margin-bottom: 16px;
+}
+
 
 .u-margin-bottom-xlg {
   margin-bottom: 40px;

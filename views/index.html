@@ -85,26 +85,11 @@
           <div class="c-arrange c--space-between c--align-center u-padding-right-20">
             <div id="ibm-home"><a href="//www.ibm.com/us-en/" class="c-arrange__item">IBM®</a></div>
             <ul class="c-list c--border u-text-capitalize">
-              <li class="c-list__item"><a href="#">Log in</a></li>
-              <li class="c-list__item"><a href="#/" class="js-learn-more">Learn More</a></li>
-            </ul>
-          </div>
-          <ul id="ibm-menu-links" role="toolbar" aria-label="Site map">
-            <li><a href="//www.ibm.com/sitemap/us/en/">Site map</a></li>
-          </ul>
-          <div id="ibm-search-module" role="search" aria-labelledby="ibm-masthead">
-            <form id="ibm-search-form" action="//www.ibm.com/Search/" method="get">
-              <p>
-                <label for="q"><span class="ibm-access">Search</span></label>
-                <input id="q" type="text" maxlength="100" value="" name="q">
-                <input type="hidden" value="17" name="v">
-                <input type="hidden" value="utf" name="en">
-                <input type="hidden" value="en" name="lang">
-                <input type="hidden" value="us" name="cc">
-                <input id="ibm-search" type="submit" value="Submit" class="ibm-btn-search">
+              <li class="c-list__item"><a href="#" onclick="ga('send', 'event', 'link', 'log in', 'login-header')">Log in</a></li>
+              <li class="c-list__item"><a href="#/" onclick="ga('send', 'event', 'button', 'learn more', 'learnmore-header')" class="js-learn-more">Learn More</a>
                 <!--MASTHEAD_END-->
-              </p>
-            </form>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -142,14 +127,18 @@
                   <div class="ibm-columns">
                     <div class="ibm-col-2-1">
                       <div class="u-text-align-center">
-                        <p class="ibm-ind-link"><a href="#" class="ibm-btn-pri ibm-btn-blue-50 bee-icon-link">I'm an IBMer</a></p><small class="u-margin-top-sm u-display-block">IBMers log into Your Learning</small>
+                        <p class="ibm-ind-link"><a href="#" onclick="ga('send', 'event', 'link', 'IBMer', 'IBMer')" class="ibm-btn-pri ibm-btn-blue-50 bee-icon-link">I'm an IBMer</a></p><small class="u-margin-top-sm u-display-block">IBMers log into Your Learning</small>
                       </div>
                     </div>
                     <div class="ibm-col-2-1">
                       <div class="u-text-align-center">
-                        <p class="ibm-ind-link"><a href="#/" class="ibm-btn-pri ibm-btn-blue-50 info-icon-link js-future-customer">I'm a future customer</a></p><small class="u-margin-top-sm u-display-block">Get more information about the Your Learning Platform</small>
+                        <p class="ibm-ind-link"><a href="#/" onclick="ga('send', 'event', 'button', 'future-customer', 'future-customer')" class="ibm-btn-pri ibm-btn-blue-50 info-icon-link js-future-customer">I'm a future customer</a></p><small class="u-margin-top-sm u-display-block">Get more information about the Your Learning Platform</small>
                       </div>
+                      <p>test</p>
+                      
+                      
                       <form method="post" action="/submit" class="u-margin-top-lg signup-form ibm-column-form">
+                        <div class="arrow-down-link u-text-align-center u-margin-bottom-md"></div>
                         <p>
                           <label for="customerName">Name:<span class="ibm-required"> *</span></label><span>
                             <input id="customerName" type="text" size="40" name="customerName" value=""></span>
@@ -167,7 +156,7 @@
                             <input id="customerPhone" type="text" size="40" name="customerPhone" value=""></span>
                         </p>
                         <p class="u-text-align-center">
-                          <button type="submit" class="ibm-btn-pri ibm-btn-blue-50">Submit</button>
+                          <button type="button" onclick="ga('send', 'event', 'button', 'submit', 'submit-form')" class="ibm-btn-pri ibm-btn-blue-50">Submit</button>
                         </p>
                       </form>
                     </div>

@@ -85,24 +85,11 @@ html(lang='en-US')
               a(class="c-arrange__item" href="//www.ibm.com/us-en/") IBM®
             ul.c-list.c--border.u-text-capitalize
               li.c-list__item
-                a(href="#") Log in
+                a(href="#", onclick="ga('send', 'event', 'link', 'log in', 'login-header')") Log in
               li.c-list__item
-                a.js-learn-more(href="#/") Learn More
+                a.js-learn-more(href="#/", onclick="ga('send', 'event', 'button', 'learn more', 'learnmore-header')") Learn More
 
-          ul#ibm-menu-links(role="toolbar" aria-label="Site map")
-            li
-              a(href="//www.ibm.com/sitemap/us/en/") Site map
-          #ibm-search-module(role="search" aria-labelledby="ibm-masthead")
-            form#ibm-search-form(action="//www.ibm.com/Search/" method="get")
-              p
-                label(for="q")
-                  span.ibm-access Search
-                input#q(type="text" maxlength="100" value="" name="q")
-                input(type="hidden" value="17" name="v")
-                input(type="hidden" value="utf" name="en")
-                input(type="hidden" value="en" name="lang")
-                input(type="hidden" value="us" name="cc")
-                input#ibm-search.ibm-btn-search(type="submit" value="Submit")
+        
                 //MASTHEAD_END
       #ibm-content-wrapper
         header(role="banner" aria-labelledby="ibm-pagetitle-h1")
@@ -117,7 +104,7 @@ html(lang='en-US')
                         img.c-logo.u-margin-top-md(src="../svg/yl-banner-trimmed.svg")
                         //- h1#ibm-pagetitle-h1.ibm-h1.ibm-light Your Learning
                       p.u-margin-top-md.c-section No matter the style of education you want, or the pace, you can find and keep track of it on Your Learning. And with our exceptional mobile capabilities, you can learn anytime, anywhere.
-                      a(href="#/").js-learn-more.u-margin-top-md.c-button Learn More
+                      a.js-learn-more.u-margin-top-md.c-button(href="#/" ) Learn More
 
                     //- div
                       //- img.c-logo.ibm-padding-top-30(src="../svg/YL_logo_noBG.svg")

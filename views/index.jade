@@ -18,25 +18,34 @@ block content
               .ibm-col-2-1
                 .u-text-align-center
                   p.ibm-ind-link
-                    a.ibm-btn-pri.ibm-btn-blue-50.bee-icon-link(href="#") I'm an IBMer
+                    a.ibm-btn-pri.ibm-btn-blue-50.bee-icon-link(href="#", onclick="ga('send', 'event', 'link', 'IBMer', 'IBMer')") I'm an IBMer
                   small.u-margin-top-sm.u-display-block IBMers log into Your Learning
               .ibm-col-2-1
                 .u-text-align-center
                   p.ibm-ind-link
-                    a.ibm-btn-pri.ibm-btn-blue-50.info-icon-link.js-future-customer(href="#/") I'm a future customer
+                    a.ibm-btn-pri.ibm-btn-blue-50.info-icon-link.js-future-customer(href="#/", onclick="ga('send', 'event', 'button', 'future-customer', 'future-customer')") I'm a future customer
                   small.u-margin-top-sm.u-display-block Get more information about the Your Learning Platform
                 //- SUCCESS MESSAGE
                 if success == true
                   .notice-success.u-text-align-center.u-margin-top-md
-                    img.u-text-ibm-blue.u-display-inline-block(src="../svg/confirm_128.svg")
+                    div.confirm-circle.u-text-align-center.u-margin-bottom-md
                     p.
                       Thanks for expressing interest. We'll send you an email when there's more information available.
+                      
+                else
+                  p test
+                
+        
+            
                 //- ------
                 //- FORM
                 //- ------
-                //- a.ibm-btn-pri.ibm-btn-blue-50.arrow-down-link
+                
+                
       
                 form.u-margin-top-lg(method="post" action="/submit" class=(errors)? 'signup-form ibm-column-form form-errors' : 'signup-form ibm-column-form')
+                  
+                  div.arrow-down-link.u-text-align-center.u-margin-bottom-md
                   //- CUSTOMER NAME
                   p
                     label(for="customerName") Name:
@@ -69,7 +78,7 @@ block content
                       input#customerPhone(type="text" size="40" name="customerPhone" value=(phoneVal == null ? '' : phoneVal))
                   //- SUBMIT BUTTON
                   p.u-text-align-center
-                    button.ibm-btn-pri.ibm-btn-blue-50(type="submit") Submit
+                    button.ibm-btn-pri.ibm-btn-blue-50(type="button", onclick="ga('send', 'event', 'button', 'submit', 'submit-form')") Submit
 
 
     //FOOTER_BEGIN

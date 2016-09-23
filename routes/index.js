@@ -2,7 +2,6 @@ var express = require('express');
 var nodemailer = require('nodemailer');
 var router = express.Router();
 
-console.log('page reloaded');
 /********************
 **  HOMEPAGE
 ********************/
