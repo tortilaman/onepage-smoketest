@@ -6,8 +6,18 @@ html, body {
 }
 
 .c-background {
-  background: url(../images/stockphoto_tint.png) no-repeat center center fixed;
+  background: url(../images/hero.png) no-repeat;
+  background-position: 0% 30%;
   background-size: cover;
+}
+
+.c-facet-pattern {
+  background: url('../images/bg-pattern.png');
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: 200%;
+  background-position: 125% 0%;
 }
 
 body {
@@ -50,6 +60,10 @@ p {
 .c-ibm-logo {
   height: 40px;
   width: auto;
+}
+
+.c-section {
+  width: 50%;
 }
 
 .c-tint {
