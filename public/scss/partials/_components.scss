@@ -9,6 +9,10 @@ html, body {
   background: url(../images/hero.png) no-repeat;
   background-position: 0% 30%;
   background-size: cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
 }
 
 .c-facet-pattern {
@@ -175,6 +179,18 @@ p {
   width: 80%;
   display: inline-block;
   padding: 32px;
+}
+
+.u-z-index-0 {
+  z-index: 0;
+}
+
+.u-z-index-2 {
+  z-index: 2;
+}
+
+.u-z-index-4 {
+  z-index: 4;
 }
 
 .u-margin-sm {
