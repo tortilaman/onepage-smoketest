@@ -5,15 +5,13 @@ var form = $('.signup-form'),
 
 learnmore.on('click', function() {
   $("html, body").animate({ scrollTop: $(document).height() }, 1000);
-  doBounce($(".arrow-down-link"), 3, '8px', 200);
+  $(".arrow-down-container").addClass('bounce');
   form.show(600);
+
+  setTimeout(function () {
+      $('.arrow-down-container').removeClass('bounce');
+  }, 2000);
 
 });
 
-
-function doBounce(element, times, distance, speed) {
-    for(var i = 0; i < times; i++) {
-        element.animate({marginTop: '-='+distance}, speed)
-            .animate({marginTop: '+='+distance}, speed);
-    }
-}
+// $('.notice-success').delay(3000).hide();

@@ -26,38 +26,12 @@
 
 .arrow-down-link::before {
   content: '\f117';
-  position: relative;
-  left: -50%;
+  // position: relative;
+  // left: -50%;
 }
 
 .confirm-circle-link::before {
   content: '\f123';
   position: relative;
 
-}
-
-.arrow {
-	width: 3em;
-	margin: 12em auto 0 auto;
-	animation: bounce 2s ease-out infinite;
-}
-@keyframes bounce {
-	0% {
-    margin-top: 12em;
-  }
-  20% {
-    margin-top: 12.5em;
-  }
-  40% {
-    margin-top: 12.3em;
-  }
-  60% {
-    margin-top: 12.5em;
-  }
-  80% {
-    margin-top: 12.3em;
-  }
- 100% {
-   margin-top: 12em;
-  }
 }
