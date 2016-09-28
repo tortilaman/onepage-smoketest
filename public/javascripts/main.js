@@ -1,5 +1,8 @@
 // Handle scroll and show form
+
+
 $( document ).ready(function() {
+
   var form = $('.signup-form'),
       learnmore = $(' .js-future-customer, .js-learn-more');
 
@@ -26,5 +29,7 @@ $( document ).ready(function() {
 });
 
 function scrollDown() {
-  $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+  $("html, body").animate({
+    scrollTop: $('.signup-form').offset().top
+  }, 1000);
 }

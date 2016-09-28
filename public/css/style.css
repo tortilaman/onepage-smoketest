@@ -307,6 +307,10 @@ p {
   margin: 16px;
 }
 
+.u-margin-bottom-sm {
+  margin-bottom: 8px;
+}
+
 .u-margin-bottom-lg {
   margin-bottom: 32px;
 }
