@@ -25,7 +25,6 @@ block content
                   small.u-display-block We're working on the Whitepaper, when it's ready we'll send it your way.
                 //- SUCCESS MESSAGE
                 if success == true
-                    
                   .notice-success.u-text-align-center.u-margin-top-md
                     div.confirm-circle-link.u-text-align-center.u-margin-bottom-sm
                     p.
@@ -36,7 +35,7 @@ block content
                 //- FORM
                 //- ------
                 form.u-margin-top-lg(method="post" action="/submit" class=(errors)? 'signup-form ibm-column-form form-errors' : 'signup-form ibm-column-form')
-                  div.arrow-down-container
+                  div.arrow-down-container.u-margin-bottom-md
                     div.arrow-down-link.arrow
                     
                   //- CUSTOMER NAME

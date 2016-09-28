@@ -471,6 +471,7 @@ form input[type="submit"]:hover {
 
 .arrow-down-link::before {
   content: '\f117';
+  font-size: 1.5rem;
 }
 
 .confirm-circle-link::before {
