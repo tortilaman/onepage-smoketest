@@ -7,26 +7,6 @@
   padding-right: 20px;
 }
 
-.c-button {
-  max-width: 250px;
-}
-
-.u-text-ibm-blue {
-  color: #4178be;
-}
-
-.c-section {
-  width: 60%;
-}
-
-.c-black-gradient {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0, transparent 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
-}
-
 .ibm-btn-pri img, .ibm-btn-pri span {
   vertical-align: middle;
 }
@@ -42,75 +22,15 @@
   height: 60px;
 }
 
-.bounce {
-  animation: bounce 2s;
-  -webkit-animation: bounce 2s;
-  -moz-animation: bounce 2s;
-  -o-animation: bounce 2s;
-}
-
-.arrow {
-  width: 60px;
-  display: block;
-  text-align: center;
-  line-height: 60px;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-}
-
-@-webkit-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -webkit-transform: translateY(0);
-  }
-  40% {
-    -webkit-transform: translateY(-30px);
-  }
-  60% {
-    -webkit-transform: translateY(-15px);
-  }
-}
-
-@-moz-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -moz-transform: translateY(0);
-  }
-  40% {
-    -moz-transform: translateY(-30px);
-  }
-  60% {
-    -moz-transform: translateY(-15px);
-  }
-}
-
-@-o-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -o-transform: translateY(0);
-  }
-  40% {
-    -o-transform: translateY(-30px);
-  }
-  60% {
-    -o-transform: translateY(-15px);
-  }
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-15px);
-  }
-}
-
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
+}
+
+.c-section {
+  width: 60%;
 }
 
 .c-background {
@@ -121,6 +41,14 @@ html, body {
   height: 100%;
   width: 100%;
   z-index: 0;
+}
+
+.c-black-gradient {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
 }
 
 .c-facet-pattern {
@@ -161,6 +89,19 @@ p {
 
 .c-list__item + .c-list__item {
   margin-left: 16px;
+}
+
+.c-link {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: inherit;
+  color: #3b6caa;
+}
+
+.c-link:hover {
+  text-decoration: underline;
 }
 
 .c-logo {
@@ -213,18 +154,15 @@ p {
 }
 
 .c-button {
-  /*background: transparent;*/
-  /*border-color: #fff;*/
-  /*color: #fff;*/
+  max-width: 250px;
   padding: 8px 16px;
   border: 2px solid;
   line-height: 16px;
-  font-size: 17px;
   min-height: 20px;
   cursor: pointer;
-  font-weight: bold;
   display: inline-block;
   text-transform: capitalize;
+  font-family: "HelvRegularIBM","Helvetica Neue",Arial,sans-serif;
 }
 
 .c-button.c--wide {
@@ -232,8 +170,8 @@ p {
 }
 
 .c-button.c--blue {
-  background: #325c80;
-  border-color: #325c80;
+  background: #4178be;
+  border-color: #4178be;
   color: #fff;
 }
 
@@ -394,6 +332,10 @@ p {
   overflow: hidden;
 }
 
+.u-text-ibm-blue {
+  color: #4178be;
+}
+
 form label {
   position: relative;
   display: block;
@@ -455,6 +397,70 @@ form input[type="submit"]:hover {
   background: #109f67;
 }
 
+.bounce {
+  animation: bounce 2s;
+  -webkit-animation: bounce 2s;
+  -moz-animation: bounce 2s;
+  -o-animation: bounce 2s;
+}
+
+.arrow {
+  width: 60px;
+  display: block;
+  text-align: center;
+  line-height: 60px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+  }
+}
+
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+  }
+}
+
+@-o-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -o-transform: translateY(0);
+  }
+  40% {
+    -o-transform: translateY(-30px);
+  }
+  60% {
+    -o-transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
 .signup-form {
   display: none;
@@ -485,6 +491,13 @@ form input[type="submit"]:hover {
 .arrow-down-link::before {
   content: '\f117';
   font-size: 1.5rem;
+}
+
+.arrow-down-container {
+  position: relative;
+  left: 50%;
+  width: 60px;
+  height: 60px;
 }
 
 .confirm-circle-link::before {

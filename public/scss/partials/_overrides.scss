@@ -1,4 +1,4 @@
-$ibm-blue: #4178be;
+
 
 #ibm-home {
   margin-left: 0;
@@ -7,26 +7,6 @@ $ibm-blue: #4178be;
 
 #ibm-universal-nav {
   padding-right: 20px;
-}
-
-.c-button {
-  max-width: 250px;
-}
-
-.u-text-ibm-blue {
-  color: $ibm-blue;
-}
-
-.c-section {
-  width: 60%;
-}
-
-.c-black-gradient {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: linear-gradient(to right, rgba(0,0,0,0.85) 0, transparent 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
 }
 
 .ibm-btn-pri img, .ibm-btn-pri span {
@@ -42,43 +22,5 @@ $ibm-blue: #4178be;
   left: 50% ;
   width: 60px;
   height: 60px;
-  
-}
-.bounce {
-  animation: bounce 2s;
-  -webkit-animation: bounce 2s;
-  -moz-animation: bounce 2s;
-  -o-animation: bounce 2s;
-}
 
-.arrow {
-  width: 60px;
-  display: block;
-  text-align: center;
-  line-height:60px;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-}
-
-@-webkit-keyframes bounce {
- 0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
- 40% {-webkit-transform: translateY(-30px);}
- 60% {-webkit-transform: translateY(-15px);}
-}
-
-@-moz-keyframes bounce {
- 0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
- 40% {-moz-transform: translateY(-30px);}
- 60% {-moz-transform: translateY(-15px);}
-}
-
-@-o-keyframes bounce {
- 0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
- 40% {-o-transform: translateY(-30px);}
- 60% {-o-transform: translateY(-15px);}
-}
-@keyframes bounce {
- 0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
- 40% {transform: translateY(-30px);}
- 60% {transform: translateY(-15px);}
 }

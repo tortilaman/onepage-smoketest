@@ -84,8 +84,9 @@
           <div class="c-arrange c--space-between c--align-center u-padding-right-20">
             <div id="ibm-home"><a href="//www.ibm.com/us-en/" class="c-arrange__item">IBM®</a></div>
             <ul class="c-list c--border u-text-capitalize">
-              <li class="c-list__item"><a href="#" onclick="ga('send', 'event', 'link', 'log in', 'login-header')">Log in</a></li>
-              <li class="c-list__item"><a href="#/" onclick="ga('send', 'event', 'button', 'learn more', 'learnmore-header')" class="js-learn-more">Learn More</a>
+              <li class="c-list__item"><a href="https://console.ng.bluemix.net/login/?cm_sp=HeaderNavigation-_-HomePage-_-LogIn" onclick="ga('send', 'event', 'link', 'log in', 'login-header')">Log in</a></li>
+              <li class="c-list__item">
+                <button href="#/" role="button" onclick="ga('send', 'event', 'button', 'learn more', 'learnmore-header')" class="c-link js-learn-more">Learn More</button>
                 <!--MASTHEAD_END-->
               </li>
             </ul>
@@ -103,9 +104,10 @@
                 <div class="ibm-col-1-1 c-arrange c--space-between">
                   <div>
                     <div class="c-arrange c--align-center">
-                      <h1 class="u-visually-hidden">Your Learning</h1><img src="../svg/yl-banner-trimmed.svg" class="c-logo u-margin-top-md">
+                      <h1 class="u-visually-hidden">Your Learning</h1><img src="../svg/yl-banner-trimmed.svg" alt="Your Learning logo" class="c-logo u-margin-top-md">
                     </div>
-                    <p class="u-margin-top-md c-section">No matter the style of education you want, or the pace, you can find and keep track of it on Your Learning. And with our exceptional mobile capabilities, you can learn anytime, anywhere.</p><a href="#/" class="js-learn-more u-margin-top-md c-button">Learn More</a>
+                    <p class="u-margin-top-md c-section">No matter the style of education you want, or the pace, you can find and keep track of it on Your Learning. And with our exceptional mobile capabilities, you can learn anytime, anywhere.</p>
+                    <button href="#/" class="js-learn-more u-margin-top-md c-button ibm-btn-pri ibm-btn-blue-50">Learn More</button>
                     <!--LEADSPACE_END-->
                   </div>
                 </div>
@@ -127,12 +129,14 @@
                   <div class="ibm-columns">
                     <div class="ibm-col-2-1">
                       <div class="u-text-align-center u-margin-bottom-lg">
-                        <p class="u-margin-bottom-sm"><a href="#" onclick="ga('send', 'event', 'link', 'IBMer', 'IBMer')" class="ibm-btn-pri ibm-btn-blue-50 bee-icon-link">I'm an IBMer</a></p><small class="u-display-block">IBMers log into Your Learning</small>
+                        <p class="u-margin-bottom-sm"><a href="https://console.ng.bluemix.net/login/?cm_sp=HeaderNavigation-_-HomePage-_-LogIn" onclick="ga('send', 'event', 'link', 'IBMer', 'IBMer')" class="ibm-btn-pri ibm-btn-blue-50 bee-icon-link">I'm an IBMer</a></p><small class="u-display-block">IBMers log into Your Learning</small>
                       </div>
                     </div>
                     <div class="ibm-col-2-1">
                       <div class="u-text-align-center u-margin-bottom-lg">
-                        <p class="u-margin-bottom-sm"><a href="#/" onclick="ga('send', 'event', 'button', 'future-customer', 'future-customer')" class="ibm-btn-pri ibm-btn-blue-50 info-icon-link js-future-customer">Request the Whitepaper</a></p><small class="u-display-block">We're working on the Whitepaper, when it's ready we'll send it your way.</small>
+                        <p class="u-margin-bottom-sm">
+                          <button href="#/" onclick="ga('send', 'event', 'button', 'future-customer', 'future-customer')" class="ibm-btn-pri ibm-btn-blue-50 info-icon-link js-future-customer">Request the Whitepaper</button>
+                        </p><small class="u-display-block">We're working on the Whitepaper, when it's ready we'll send it your way.</small>
                       </div>
                       <form method="post" action="/submit" class="u-margin-top-lg signup-form ibm-column-form">
                         <div class="arrow-down-container u-margin-bottom-md">

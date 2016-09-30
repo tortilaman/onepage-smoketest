@@ -85,9 +85,9 @@ html(lang='en-US')
               a(class="c-arrange__item" href="//www.ibm.com/us-en/") IBM®
             ul.c-list.c--border.u-text-capitalize
               li.c-list__item
-                a(href="#", onclick="ga('send', 'event', 'link', 'log in', 'login-header')") Log in
+                a(href="https://console.ng.bluemix.net/login/?cm_sp=HeaderNavigation-_-HomePage-_-LogIn", onclick="ga('send', 'event', 'link', 'log in', 'login-header')") Log in
               li.c-list__item
-                a.js-learn-more(href="#/", onclick="ga('send', 'event', 'button', 'learn more', 'learnmore-header')") Learn More
+                button.c-link.js-learn-more(href="#/", role="button" ,onclick="ga('send', 'event', 'button', 'learn more', 'learnmore-header')") Learn More
 
         
                 //MASTHEAD_END
@@ -103,9 +103,9 @@ html(lang='en-US')
                   div
                     div.c-arrange.c--align-center
                       h1.u-visually-hidden Your Learning
-                      img.c-logo.u-margin-top-md(src="../svg/yl-banner-trimmed.svg")
+                      img.c-logo.u-margin-top-md(src="../svg/yl-banner-trimmed.svg", alt="Your Learning logo")
                     p.u-margin-top-md.c-section No matter the style of education you want, or the pace, you can find and keep track of it on Your Learning. And with our exceptional mobile capabilities, you can learn anytime, anywhere.
-                    a.js-learn-more.u-margin-top-md.c-button(href="#/" ) Learn More
+                    button.js-learn-more.u-margin-top-md.c-button.ibm-btn-pri.ibm-btn-blue-50(href="#/" ) Learn More
 
                     //LEADSPACE_END
         block content
