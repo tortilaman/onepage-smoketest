@@ -17,10 +17,7 @@
   margin-right: 0.4em;
 }
 
-.arrow-down-container {
+.ibm-btn-pri::before {
   position: relative;
-  left: 50% ;
-  width: 60px;
-  height: 60px;
-
+  vertical-align: sub;
 }
