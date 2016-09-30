@@ -15,7 +15,7 @@
   margin-right: 0.4em;
 }
 
-*[class*="ibm-btn-"] {
+.ibm-ind-link *[class*="ibm-btn-"] {
   padding-left: 2.9em;
   margin-bottom: 5px;
 }
