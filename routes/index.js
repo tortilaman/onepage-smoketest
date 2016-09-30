@@ -20,8 +20,6 @@ router.get('/', function(req,res,next) {
   });
 
   req.session.errors = null;
-  if(req.session.success === true) req.session.success = false;
-  else req.session.success = null;
   req.session.success = null;
   req.session.errorName = null;
   req.session.errorEmail = null;
