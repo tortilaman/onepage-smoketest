@@ -15,9 +15,13 @@
   margin-right: 0.4em;
 }
 
-.ibm-btn-pri::before {
-  position: relative;
-  vertical-align: sub;
+*[class*="ibm-btn-"] {
+  padding-left: 2.9em;
+  margin-bottom: 5px;
+}
+
+*[class*="ibm-btn-"]::before {
+  left: .4em;
 }
 
 html, body {
@@ -152,6 +156,7 @@ p {
 }
 
 .c-button {
+  position: relative;
   max-width: 250px;
   cursor: pointer;
   display: inline-block;
