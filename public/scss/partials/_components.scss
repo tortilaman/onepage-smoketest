@@ -7,8 +7,24 @@ html, body {
   width: 100%;
 }
 
-.c-section {
-  width: 60%;
+.c-arrange {
+  display: flex;
+
+  &.c--center {
+    justify-content: center;
+  }
+
+  &.c--space-between {
+    justify-content: space-between;
+  }
+
+  &.c--align-center {
+    align-items: center;
+  }
+
+  &.c--align-start {
+    align-items: flex-start;
+  }
 }
 
 .c-background {
@@ -46,6 +62,31 @@ body {
 
 p {
   -webkit-font-smoothing: antialiased;
+}
+
+.c-button {
+  position: relative; // needed for an absolutely positioned ::before icon
+  max-width: 250px;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: capitalize;
+  font-family: "HelvRegularIBM","Helvetica Neue",Arial,sans-serif;
+
+  &.c--wide {
+    width: 100%;
+  }
+
+  &.c--blue {
+    background: $ibm-blue;
+    border-color: $ibm-blue;
+    color: #fff;
+  }
+
+  &.c--white-border {
+    background: transparent;
+    border-color: #fff;
+    color: #fff;
+  }
 }
 
 .c-list {
@@ -136,25 +177,6 @@ p {
   }
 }
 
-.c-button {
-  position: relative; // needed for an absolutely positioned ::before icon
-  max-width: 250px;
-  cursor: pointer;
-  display: inline-block;
-  text-transform: capitalize;
-  font-family: "HelvRegularIBM","Helvetica Neue",Arial,sans-serif;
-
-  &.c--wide {
-    width: 100%;
-  }
-
-  &.c--blue {
-    background: $ibm-blue;
-    border-color: $ibm-blue;
-    color: #fff;
-  }
-}
-
 .c-header-bar {
   min-height: 50px;
   background-color: #008571;
@@ -178,25 +200,6 @@ p {
   }
 }
 
-.c-arrange {
-  display: flex;
-
-  &.c--center {
-    justify-content: center;
-  }
-
-  &.c--space-between {
-    justify-content: space-between;
-  }
-
-  &.c--align-center {
-    align-items: center;
-  }
-
-  &.c--align-start {
-    align-items: flex-start;
-  }
-}
 
 .c-container {
   max-width: 650px;

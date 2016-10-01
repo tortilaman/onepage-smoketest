@@ -6,9 +6,10 @@ $( document ).ready(function() {
   var form = $('.signup-form'),
       learnmore = $(' .js-future-customer, .js-learn-more');
 
+  // if the success notice is visible
   if ( $( ".notice-success" ).length ) {
     form.hide();
-    scrollDown();
+    // scrollDown();
     setTimeout(function () {
         $('.notice-success').fadeOut();
     }, 5000);
