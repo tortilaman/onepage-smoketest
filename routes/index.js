@@ -6,6 +6,15 @@ var router = express.Router();
 **  HOMEPAGE
 ********************/
 router.get('/', function(req,res,next) {
+  if(req.session.iterator === null) {
+    req.session.iterator = 0;
+  } else if(req.session.iterator === 1) {
+    req.session.success = true;
+  } else {
+    req.session.success = false;
+  }
+  req.session.iterator += 1;
+  console.log("Success is: "+req.session.success);
   //Sending all flag values to the template
   res.render('index', {
     title: 'IBM My Learning',
@@ -20,8 +29,7 @@ router.get('/', function(req,res,next) {
   });
 
   req.session.errors = null;
-  if(req.session.success === true) req.session.success = false;
-  else req.session.success = null;
+  req.session.success = null;
   req.session.errorName = null;
   req.session.errorEmail = null;
 });
@@ -51,7 +59,8 @@ router.post('/submit', function(req, res, next) {
   //There are validation errors, take care of it.
   if (errors) {
     req.session.errors = errors;
-    req.session.success = false;//unused
+    req.session.success = false;
+    req.session.iterator = 0;
     //Clear error flags so previous submissions don't affect current submission
     // req.session.errorName = null;
     // req.session.errorEmail = null;
@@ -69,7 +78,7 @@ router.post('/submit', function(req, res, next) {
     }
   //No errors, send data via email.
   } else {
-    req.session.success = true;
+    req.session.iterator += 1;
     console.log("No Errors");
     // req.session.errorName = null;
     // req.session.errorEmail = null;
