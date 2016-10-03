@@ -1,11 +1,17 @@
 $ibm-blue: #4178be;
 
+// * {
+//     Box-sizing: Border-box;
+//   }
+
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
 }
+
+
 
 .c-arrange {
   display: flex;
@@ -138,7 +144,14 @@ p {
 }
 
 .c-section {
-  width: 50%;
+  max-width: 850px;
+  
+  &.c--contain {
+
+  }
+  &.c--half {
+    width: 50%;
+  }
 }
 
 .c-tint {
@@ -287,6 +300,12 @@ p {
   position: absolute;
 }
 
+.u-horizontal-center {
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
 .u-text-white {
   color: #fff;
 }
@@ -301,6 +320,10 @@ p {
 
 .u-font-garamond {
   font-family: 'EB Garamond', serif;
+}
+
+.u-font-helvetica-bold {
+  font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", "HelvBoldIBM", Arial, sans-serif !important;
 }
 
 .u-display-block {
