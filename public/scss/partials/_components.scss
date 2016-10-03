@@ -1,8 +1,8 @@
 $ibm-blue: #4178be;
 
-// * {
-//     Box-sizing: Border-box;
-//   }
+* {
+    // box-sizing: border-box;
+  }
 
 html, body {
   margin: 0;
@@ -81,6 +81,9 @@ p {
   &.c--wide {
     width: 100%;
   }
+  &.c--long {
+    width: 250px;
+  }
 
   &.c--blue {
     background: $ibm-blue;
@@ -145,7 +148,7 @@ p {
 
 .c-section {
   max-width: 850px;
-  
+
   &.c--contain {
 
   }
