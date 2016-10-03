@@ -24,8 +24,8 @@
   left: -1.0em;
 }
 
-.t-column {
-  width: 300px;
+.t-column-2-1 {
+  max-width: 400px;
 }
 
 html, body {
@@ -102,10 +102,6 @@ p {
 
 .c-button.c--wide {
   width: 100%;
-}
-
-.c-button.c--long {
-  width: 250px;
 }
 
 .c-button.c--blue {
