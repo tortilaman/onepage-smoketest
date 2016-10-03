@@ -78,7 +78,7 @@ router.post('/submit', function(req, res, next) {
     }
   //No errors, send data via email.
   } else {
-    req.session.iterator += 1;
+    req.session.iterator = 1;
     console.log("No Errors");
     // req.session.errorName = null;
     // req.session.errorEmail = null;
