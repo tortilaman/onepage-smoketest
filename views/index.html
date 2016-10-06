@@ -129,40 +129,42 @@
                   <div class="ibm-columns c-arrange c--center">
                     <div class="ibm-col-2-1 t-column-2-1">
                       <div class="u-text-align-center u-margin-bottom-lg">
-                        <p class="u-margin-bottom-sm ibm-ind-link"><a href="https://console.ng.bluemix.net/login/?cm_sp=HeaderNavigation-_-HomePage-_-LogIn" onclick="ga('send', 'event', 'link', 'IBMer', 'IBMer')" class="c-button c--wide ibm-btn-pri ibm-btn-blue-50"> <span class="c-button__icon bee-icon-link u-position-relative">I'm an IBMer</span></a></p><small class="u-display-block">Log in and start learning today</small>
+                        <p class="u-margin-bottom-xs ibm-ind-link"><a href="https://console.ng.bluemix.net/login/?cm_sp=HeaderNavigation-_-HomePage-_-LogIn" onclick="ga('send', 'event', 'link', 'IBMer', 'IBMer')" class="c-button c--wide ibm-btn-pri ibm-btn-blue-50"> <span class="c-button__icon bee-icon-link u-position-relative">I'm an IBMer</span></a></p><small class="c-subtext u-display-block">Log in and start learning today</small>
                       </div>
                     </div>
                     <div class="ibm-col-2-1 t-column-2-1">
                       <div class="u-text-align-center u-margin-bottom-lg">
-                        <p class="u-margin-bottom-sm ibm-ind-link">
+                        <p class="u-margin-bottom-xs ibm-ind-link">
                           <button href="#/" onclick="ga('send', 'event', 'button', 'future-customer', 'future-customer')" class="c-button c--wide ibm-btn-pri ibm-btn-blue-50 js-future-customer"> <span class="c-button__icon info-icon-link u-position-relative">Request the Whitepaper</span></button>
-                        </p><small class="u-display-block">We're working hard on the Whitepaper! When it's ready we'll send it your way.</small>
+                        </p><small class="c-subtext u-display-block">We're working hard on the Whitepaper! When it's ready we'll send it your way.</small>
                       </div>
-                      <form method="post" action="/submit" class="u-margin-top-lg signup-form ibm-column-form">
-                        <div class="arrow-down-container u-margin-bottom-md">
-                          <div class="arrow-down-link arrow"></div>
-                        </div>
-                        <p>
-                          <label for="customerName">Name:<span class="ibm-required"> *</span></label><span>
-                            <input id="customerName" type="text" size="40" name="customerName" value=""></span>
-                        </p>
-                        <p>
-                          <label for="customerEmail">Email:<span class="ibm-required"> *</span></label><span>
-                            <input id="customerEmail" type="email" size="40" name="customerEmail" value=""></span>
-                        </p>
-                        <p>
-                          <label for="customerCompany">Company Name:</label><span>
-                            <input id="customerCompany" type="text" size="40" name="customerCompany" value=""></span>
-                        </p>
-                        <p>
-                          <label for="customerPhone">Phone Number:</label><span>
-                            <input id="customerPhone" type="text" size="40" name="customerPhone" value=""></span>
-                        </p>
-                        <p class="u-text-align-center">
-                          <button type="submit" onclick="ga('send', 'event', 'button', 'submit', 'submit-form')" class="ibm-btn-pri ibm-btn-blue-50">Submit</button>
-                        </p>
-                      </form>
                     </div>
+                  </div>
+                  <div class="u-horizontal-center u-display-inline-block">
+                    <form method="post" action="/submit" class="signup-form ibm-column-form">
+                      <div class="arrow-down-container u-margin-bottom-md">
+                        <div class="arrow-down-link arrow"></div>
+                      </div>
+                      <p>
+                        <label for="customerName">Full Name:<span class="ibm-required"> *</span></label><span>
+                          <input id="customerName" type="text" name="customerName" value=""></span>
+                      </p>
+                      <p>
+                        <label for="customerEmail">Email:<span class="ibm-required"> *</span></label><span>
+                          <input id="customerEmail" type="email" name="customerEmail" value=""></span>
+                      </p>
+                      <p>
+                        <label for="customerCompany">Company Name:</label><span>
+                          <input id="customerCompany" type="text" name="customerCompany" value=""></span>
+                      </p>
+                      <p>
+                        <label for="customerPhone">Phone Number:</label><span>
+                          <input id="customerPhone" type="text" name="customerPhone" value=""></span>
+                      </p>
+                      <p class="u-text-align-center">
+                        <button type="submit" onclick="ga('send', 'event', 'button', 'submit', 'submit-form')" class="ibm-btn-pri ibm-btn-blue-50">Submit</button>
+                      </p>
+                    </form>
                   </div>
                 </div>
               </div>

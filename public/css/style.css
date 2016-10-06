@@ -28,6 +28,15 @@
   max-width: 400px;
 }
 
+.ibm-ind-link {
+  padding-bottom: 0 !important;
+}
+
+.ibm-required {
+  left: auto !important;
+  opacity: 1;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -57,7 +66,7 @@ html, body {
 
 .c-background {
   background: url(../images/hero.png) no-repeat;
-  background-position: 0% 30%;
+  background-position: 47% 32%;
   background-size: cover;
   position: absolute;
   height: 100%;
@@ -89,6 +98,11 @@ body {
 
 p {
   -webkit-font-smoothing: antialiased;
+}
+
+.c-input {
+  max-width: 150px !important;
+  width: 100%;
 }
 
 .c-button {
@@ -196,6 +210,10 @@ p {
   text-decoration: none;
 }
 
+.c-subtext {
+  font-size: 13px;
+}
+
 .c-icon {
   color: #23527c;
 }
@@ -224,7 +242,7 @@ p {
 }
 
 .c-heading.c--1 {
-  font-size: 32px;
+  font-size: 3rem;
 }
 
 .c-container {
@@ -252,6 +270,10 @@ p {
 
 .u-margin-md {
   margin: 16px;
+}
+
+.u-margin-bottom-xs {
+  margin-bottom: 4px;
 }
 
 .u-margin-bottom-sm {
@@ -340,6 +362,10 @@ p {
 
 .u-display-block {
   display: block !important;
+}
+
+.u-display-inline-block {
+  display: inline-block !important;
 }
 
 .u-visually-hidden {
