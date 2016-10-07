@@ -37,15 +37,15 @@ block content
             //- ------
             //- FORM
             //- ------
-            div
+            div.signup-form
               h2#ibm-pagetitle-h2.ibm-h2.u-text-align-center Let's Talk
-              form.u-horizontal-center.u-display-inline-block(method="post" action="/submit" class=(errors)? 'signup-form ibm-column-form form-errors' : 'signup-form ibm-column-form')
+              form.u-horizontal-center.u-display-inline-block(method="post" action="/submit" novalidate class=(errors)? 'signup-form ibm-column-form form-errors' : 'signup-form ibm-column-form')
                 div.arrow-down-container.u-margin-bottom-md.u-horizontal-center
                   div.arrow-down-link.arrow
                   
                 //- CUSTOMER NAME
                 p.form-row
-                  input#customerName.c-input(type="text", required='', name="customerName", value=(nameVal == null ? "" : nameVal) class=(errorName == true? 'ibm-field-error' : ''))
+                  input#customerName.c-input(type="text", required, name="customerName", value=(nameVal == null ? "" : nameVal) class=(errorName == true? 'ibm-field-error' : ''))
                   label(alt="Name", for="customerName", data-placeholder="Full Name*")
                   if errorName == true
                     each val in errors
@@ -53,7 +53,7 @@ block content
                         span.ibm-item-note.ibm-alert-link #{val.msg}.
                 //- CUSTOMER EMAIL
                 p.form-row
-                  input#customerEmail.c-input(type="email", required="", name="customerEmail" value=(emailVal == null ? "" : emailVal) class=(errorEmail == true? 'ibm-field-error' : ''))
+                  input#customerEmail.c-input(type="email", required, name="customerEmail" value=(emailVal == null ? "" : emailVal) class=(errorEmail == true? 'ibm-field-error' : ''))
                   label(alt="Email" for="customerEmail", data-placeholder="Email*")
                   if errorEmail == true
                     each val in errors
@@ -61,11 +61,11 @@ block content
                         span.ibm-item-note.ibm-alert-link #{val.msg}.
                 //- CUSTOMER COMPANY
                 p.form-row
-                  input#customerCompany.c-input(type="text", required="", name="customerCompany" value=(companyVal == null ? '' : companyVal))
+                  input#customerCompany.c-input(type="text", required, name="customerCompany" value=(companyVal == null ? '' : companyVal))
                   label(alt="Company" for="customerCompany" data-placeholder="Company")
                 //- CUSTOMER PHONE
                 p.form-row
-                  input#customerPhone.c-input(type="text", required="", name="customerPhone" value=(phoneVal == null ? '' : phoneVal))
+                  input#customerPhone.c-input(type="text", required, name="customerPhone" value=(phoneVal == null ? '' : phoneVal))
                   label(for="customerPhone", data-placeholder="Phone Number")
                 //- SUBMIT BUTTON
                 p.u-text-align-center

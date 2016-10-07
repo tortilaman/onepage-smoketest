@@ -478,6 +478,7 @@ form {
   padding-bottom: 0;
   margin-bottom: 2rem;
   position:relative;
+
    &:last-child {
      margin-bottom:0;
    }
@@ -485,9 +486,6 @@ form {
   input[type="text"], input[type="email"] {
 
     width:100%;
-    // padding:10px;
-    // border:1px solid #ddd;
-    // border-radius:4px;
     transition:all 0.5s ease-in-out;
 
     + label[data-placeholder] {
@@ -498,7 +496,7 @@ form {
         content:attr(data-placeholder);
         display:block;
         position: absolute;
-        top:50%;
+        top:20px;
         left:0.5rem;
         transform: translate(0%, -50%);
         transition:all 0.5s ease-in-out;
@@ -511,7 +509,6 @@ form {
 
     &:focus,
     &:valid {
-
       + label[data-placeholder] {
         &:after {
           color: $ibm-blue;
@@ -522,6 +519,7 @@ form {
       }
 
     }
+
 
   }
 
