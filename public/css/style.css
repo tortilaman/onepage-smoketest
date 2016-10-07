@@ -393,6 +393,10 @@ p {
   padding: 0;
 }
 
+.u-background-blue-10 {
+  background-color: #C0E6FF;
+}
+
 form label {
   display: block;
 }
@@ -548,6 +552,12 @@ form input[type="submit"]:hover {
 }
 
 .form-row input[type="text"]:focus + label[data-placeholder]:after, .form-row input[type="text"]:valid + label[data-placeholder]:after, .form-row input[type="email"]:focus + label[data-placeholder]:after, .form-row input[type="email"]:valid + label[data-placeholder]:after {
+  color: #4178be;
+  transform: translate(-5%, -180%) scale(0.9, 0.9);
+  background-color: white;
+}
+
+.form-row input[type="text"]:not([value=""]) + label[data-placeholder]:after, .form-row input[type="email"]:not([value=""]) + label[data-placeholder]:after {
   color: #4178be;
   transform: translate(-5%, -180%) scale(0.9, 0.9);
   background-color: white;
