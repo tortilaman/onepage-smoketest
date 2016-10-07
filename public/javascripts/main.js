@@ -1,15 +1,22 @@
 // Handle scroll and show form
 
 
-$( document ).ready(function() {
-
+$(document).ready(function() {
   var form = $('.signup-form'),
       learnmore = $(' .js-future-customer, .js-learn-more');
 
+  function scrollDown() {
+    $("html, body").animate({
+      scrollTop: form.offset().top
+    }, 1000);
+  }
+  
   // if the success notice is visible
   if ( $( ".notice-success" ).length ) {
+    console.log('success notice visible!');
     form.hide();
-    // scrollDown();
+    scrollDown();
+
     setTimeout(function () {
         $('.notice-success').fadeOut();
     }, 5000);
@@ -28,9 +35,3 @@ $( document ).ready(function() {
 
   });
 });
-
-function scrollDown() {
-  $("html, body").animate({
-    scrollTop: $('.signup-form').offset().top
-  }, 1000);
-}

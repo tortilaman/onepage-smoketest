@@ -14,6 +14,10 @@ html, body {
 
 
 
+.u-icon-font-medium {
+  font-size: 2em;
+}
+
 .c-arrange {
   display: flex;
 
@@ -72,7 +76,7 @@ p {
 }
 
 .c-input {
-  max-width: 150px !important;
+  max-width: 360px !important;
   width: 100%;
 }
 
@@ -331,6 +335,10 @@ p {
   font-size: 50px !important;
 }
 
+.u-font-medium {
+  font-size: 36px;
+}
+
 .u-font-garamond {
   font-family: 'EB Garamond', serif;
 }
@@ -360,9 +368,13 @@ p {
   color: $ibm-blue;
 }
 
+.u-padding-reset {
+  padding: 0;
+}
+
 form {
   label {
-    position: relative;
+    // position: relative;
     display: block;
 
     input {
@@ -461,6 +473,59 @@ form {
  40% {transform: translateY(-30px);}
  60% {transform: translateY(-15px);}
 }
+
+.form-row {
+  padding-bottom: 0;
+  margin-bottom: 2rem;
+  position:relative;
+   &:last-child {
+     margin-bottom:0;
+   }
+
+  input[type="text"], input[type="email"] {
+
+    width:100%;
+    // padding:10px;
+    // border:1px solid #ddd;
+    // border-radius:4px;
+    transition:all 0.5s ease-in-out;
+
+    + label[data-placeholder] {
+      pointer-events:none;
+
+
+      &:after {
+        content:attr(data-placeholder);
+        display:block;
+        position: absolute;
+        top:50%;
+        left:0.5rem;
+        transform: translate(0%, -50%);
+        transition:all 0.5s ease-in-out;
+
+        padding:0 0.25rem;
+        // background-color:rgba(255,255,255,0);
+      }
+
+    }
+
+    &:focus,
+    &:valid {
+
+      + label[data-placeholder] {
+        &:after {
+          color: $ibm-blue;
+          transform: translate(-5%, -180%) scale(0.9, 0.9);
+          background-color:rgba(255,255,255,1);
+        }
+
+      }
+
+    }
+
+  }
+
+  }
 
 
 /*# sourceMappingURL=styles.css.map */

@@ -25,56 +25,52 @@ block content
                     button.c-button.c--wide.ibm-btn-pri.ibm-btn-blue-50.js-future-customer(href="#/", onclick="ga('send', 'event', 'button', 'future-customer', 'future-customer')") 
                       span.c-button__icon.info-icon-link.u-position-relative Request the Whitepaper
                   small.c-subtext.u-display-block We're working hard on the Whitepaper! When it's ready we'll send it your way.
-                //- SUCCESS MESSAGE
-                if success == true
-                  .notice-success.u-text-align-center.u-margin-top-md
-                    div.confirm-circle-link.u-text-align-center.u-margin-bottom-sm
-                    p.
-                      Thank you! You'll hear from us when there's more information available.
-    
+            //- SUCCESS MESSAGE
+            if success == true
+              .notice-success.u-text-align-center.u-margin-top-md
+                div.confirm-circle-link.u-text-align-center.u-margin-bottom-sm.u-icon-font-medium
+                p
+                  h2.u-font-medium We'll be in touch.
+                  h3 You'll hear from us soon.
+
             
             //- ------
             //- FORM
             //- ------
-            div.u-horizontal-center.u-display-inline-block
-              form(method="post" action="/submit" class=(errors)? 'signup-form ibm-column-form form-errors' : 'signup-form ibm-column-form')
-                div.arrow-down-container.u-margin-bottom-md
+            div
+              h2#ibm-pagetitle-h2.ibm-h2.u-text-align-center Let's Talk
+              form.u-horizontal-center.u-display-inline-block(method="post" action="/submit" class=(errors)? 'signup-form ibm-column-form form-errors' : 'signup-form ibm-column-form')
+                div.arrow-down-container.u-margin-bottom-md.u-horizontal-center
                   div.arrow-down-link.arrow
                   
                 //- CUSTOMER NAME
-                p
-                  label(for="customerName") Full Name:
-                    span.ibm-required  *
-                  span
-                    input#customerName(type="text" name="customerName" value=(nameVal == null ? "" : nameVal) class=(errorName == true? 'ibm-field-error' : ''))
+                p.form-row
+                  input#customerName.c-input(type="text", required='', name="customerName", value=(nameVal == null ? "" : nameVal) class=(errorName == true? 'ibm-field-error' : ''))
+                  label(alt="Name", for="customerName", data-placeholder="Full Name*")
                   if errorName == true
                     each val in errors
                       if val.param == "customerName"
                         span.ibm-item-note.ibm-alert-link #{val.msg}.
                 //- CUSTOMER EMAIL
-                p
-                  label(for="customerEmail") Email:
-                    span.ibm-required  *
-                  span
-                    input#customerEmail(type="email" name="customerEmail" value=(emailVal == null ? "" : emailVal) class=(errorEmail == true? 'ibm-field-error' : ''))
+                p.form-row
+                  input#customerEmail.c-input(type="email", required="", name="customerEmail" value=(emailVal == null ? "" : emailVal) class=(errorEmail == true? 'ibm-field-error' : ''))
+                  label(alt="Email" for="customerEmail", data-placeholder="Email*")
                   if errorEmail == true
                     each val in errors
                       if val.param == "customerEmail"
                         span.ibm-item-note.ibm-alert-link #{val.msg}.
                 //- CUSTOMER COMPANY
-                p
-                  label(for="customerCompany") Company Name:
-                  span
-                    input#customerCompany(type="text" name="customerCompany" value=(companyVal == null ? '' : companyVal))
+                p.form-row
+                  input#customerCompany.c-input(type="text", required="", name="customerCompany" value=(companyVal == null ? '' : companyVal))
+                  label(alt="Company" for="customerCompany" data-placeholder="Company")
                 //- CUSTOMER PHONE
-                p
-                  label(for="customerPhone") Phone Number:
-                  span
-                    input#customerPhone(type="text" name="customerPhone" value=(phoneVal == null ? '' : phoneVal))
+                p.form-row
+                  input#customerPhone.c-input(type="text", required="", name="customerPhone" value=(phoneVal == null ? '' : phoneVal))
+                  label(for="customerPhone", data-placeholder="Phone Number")
                 //- SUBMIT BUTTON
                 p.u-text-align-center
                   button.ibm-btn-pri.ibm-btn-blue-50(type="submit", onclick="ga('send', 'event', 'button', 'submit', 'submit-form')") Submit
-
+                  //- span Submitting information...
 
     //FOOTER_BEGIN
     #ibm-footer-module

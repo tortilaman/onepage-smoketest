@@ -140,26 +140,27 @@
                       </div>
                     </div>
                   </div>
-                  <div class="u-horizontal-center u-display-inline-block">
-                    <form method="post" action="/submit" class="signup-form ibm-column-form">
-                      <div class="arrow-down-container u-margin-bottom-md">
+                  <div>
+                    <h2 id="ibm-pagetitle-h2" class="ibm-h2 u-text-align-center">Let's Talk</h2>
+                    <form method="post" action="/submit" class="u-horizontal-center u-display-inline-block signup-form ibm-column-form">
+                      <div class="arrow-down-container u-margin-bottom-md u-horizontal-center">
                         <div class="arrow-down-link arrow"></div>
                       </div>
-                      <p>
-                        <label for="customerName">Full Name:<span class="ibm-required"> *</span></label><span>
-                          <input id="customerName" type="text" name="customerName" value=""></span>
+                      <p class="form-row">
+                        <input id="customerName" type="text" required="" name="customerName" value="" class="c-input">
+                        <label alt="Name" for="customerName" data-placeholder="Full Name*"></label>
                       </p>
-                      <p>
-                        <label for="customerEmail">Email:<span class="ibm-required"> *</span></label><span>
-                          <input id="customerEmail" type="email" name="customerEmail" value=""></span>
+                      <p class="form-row">
+                        <input id="customerEmail" type="email" required="" name="customerEmail" value="" class="c-input">
+                        <label alt="Email" for="customerEmail" data-placeholder="Email*"></label>
                       </p>
-                      <p>
-                        <label for="customerCompany">Company Name:</label><span>
-                          <input id="customerCompany" type="text" name="customerCompany" value=""></span>
+                      <p class="form-row">
+                        <input id="customerCompany" type="text" required="" name="customerCompany" value="" class="c-input">
+                        <label alt="Company" for="customerCompany" data-placeholder="Company"></label>
                       </p>
-                      <p>
-                        <label for="customerPhone">Phone Number:</label><span>
-                          <input id="customerPhone" type="text" name="customerPhone" value=""></span>
+                      <p class="form-row">
+                        <input id="customerPhone" type="text" required="" name="customerPhone" value="" class="c-input">
+                        <label for="customerPhone" data-placeholder="Phone Number"></label>
                       </p>
                       <p class="u-text-align-center">
                         <button type="submit" onclick="ga('send', 'event', 'button', 'submit', 'submit-form')" class="ibm-btn-pri ibm-btn-blue-50">Submit</button>

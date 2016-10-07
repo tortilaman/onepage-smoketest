@@ -44,6 +44,10 @@ html, body {
   width: 100%;
 }
 
+.u-icon-font-medium {
+  font-size: 2em;
+}
+
 .c-arrange {
   display: flex;
 }
@@ -101,7 +105,7 @@ p {
 }
 
 .c-input {
-  max-width: 150px !important;
+  max-width: 360px !important;
   width: 100%;
 }
 
@@ -352,6 +356,10 @@ p {
   font-size: 50px !important;
 }
 
+.u-font-medium {
+  font-size: 36px;
+}
+
 .u-font-garamond {
   font-family: 'EB Garamond', serif;
 }
@@ -381,8 +389,11 @@ p {
   color: #4178be;
 }
 
+.u-padding-reset {
+  padding: 0;
+}
+
 form label {
-  position: relative;
   display: block;
 }
 
@@ -506,6 +517,42 @@ form input[type="submit"]:hover {
   }
 }
 
+.form-row {
+  padding-bottom: 0;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.form-row:last-child {
+  margin-bottom: 0;
+}
+
+.form-row input[type="text"], .form-row input[type="email"] {
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.form-row input[type="text"] + label[data-placeholder], .form-row input[type="email"] + label[data-placeholder] {
+  pointer-events: none;
+}
+
+.form-row input[type="text"] + label[data-placeholder]:after, .form-row input[type="email"] + label[data-placeholder]:after {
+  content: attr(data-placeholder);
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  transform: translate(0%, -50%);
+  transition: all 0.5s ease-in-out;
+  padding: 0 0.25rem;
+}
+
+.form-row input[type="text"]:focus + label[data-placeholder]:after, .form-row input[type="text"]:valid + label[data-placeholder]:after, .form-row input[type="email"]:focus + label[data-placeholder]:after, .form-row input[type="email"]:valid + label[data-placeholder]:after {
+  color: #4178be;
+  transform: translate(-5%, -180%) scale(0.9, 0.9);
+  background-color: white;
+}
+
 /*# sourceMappingURL=styles.css.map */
 .signup-form {
   display: none;
@@ -516,7 +563,7 @@ form input[type="submit"]:hover {
 }
 
 .notice-success {
-  background: #2D660A;
+  background: #144D14;
   padding: 1em;
   color: white;
 }
@@ -539,9 +586,7 @@ form input[type="submit"]:hover {
 }
 
 .arrow-down-container {
-  position: relative;
-  left: 50%;
-  width: 60px;
+  width: 20px;
   height: 60px;
 }
 
