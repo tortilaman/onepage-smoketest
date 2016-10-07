@@ -22,6 +22,20 @@
   margin-bottom: 5px;
 }
 
-*[class*="ibm-btn-"]::before {
-  left: .4em;
+*[class*="ibm-btn-"] span::before {
+  left: -1.0em;
+}
+
+.t-column-2-1 {
+  max-width: 400px;
+
+}
+
+.ibm-ind-link {
+  padding-bottom: 0 !important;
+}
+
+.ibm-required {
+  left: auto !important;
+  opacity: 1;
 }

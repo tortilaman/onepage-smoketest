@@ -8,21 +8,23 @@ block content
           #ibm-content-main.u-margin-bottom-lg
             //-ONE COLUMN TOP CONTENT CALL TO ACTION
             .ibm-columns
-              .ibm-col-1-1
+              .ibm-col-1-1.c-section.c--contain.u-horizontal-center
                 h2#ibm-pagetitle-h2.ibm-h2.u-margin-top-lg.u-margin-bottom-md.u-text-align-center.u-text-capitalize What will you learn today?
                 p.ibm-h5.u-margin-bottom-lg Your Learning is IBM's digital learning platform, personalized with a built-in sense-and-respond cognitive capability that recommends learning for you and understands what you like over time. Professional development and education – in one place, built solely on IBM technology including Bluemix, Cloudant, Softlayer, DB2 and more.
             //-TWO COLUMN BUTTON ACTIONS
-            .ibm-columns
-              .ibm-col-2-1
+            .ibm-columns.c-arrange.c--center
+              .ibm-col-2-1.t-column-2-1
                 .u-text-align-center.u-margin-bottom-lg
-                  p.u-margin-bottom-sm.ibm-ind-link
-                    a.ibm-btn-pri.ibm-btn-blue-50.bee-icon-link(href="https://console.ng.bluemix.net/login/?cm_sp=HeaderNavigation-_-HomePage-_-LogIn", onclick="ga('send', 'event', 'link', 'IBMer', 'IBMer')") I'm an IBMer
-                  small.u-display-block IBMers log into Your Learning
-              .ibm-col-2-1
+                  p.u-margin-bottom-xs.ibm-ind-link
+                    a.c-button.c--wide.ibm-btn-pri.ibm-btn-blue-50(href="https://console.ng.bluemix.net/login/?cm_sp=HeaderNavigation-_-HomePage-_-LogIn", onclick="ga('send', 'event', 'link', 'IBMer', 'IBMer')") 
+                      span.c-button__icon.bee-icon-link.u-position-relative I'm an IBMer
+                  small.c-subtext.u-display-block Log in and start learning today
+              .ibm-col-2-1.t-column-2-1
                 .u-text-align-center.u-margin-bottom-lg
-                  p.u-margin-bottom-sm.ibm-ind-link
-                    button.c-button.ibm-btn-pri.ibm-btn-blue-50.info-icon-link.js-future-customer(href="#/", onclick="ga('send', 'event', 'button', 'future-customer', 'future-customer')") Request the Whitepaper
-                  small.u-display-block We're working hard on the Whitepaper! When it's ready we'll send it your way.
+                  p.u-margin-bottom-xs.ibm-ind-link
+                    button.c-button.c--wide.ibm-btn-pri.ibm-btn-blue-50.js-future-customer(href="#/", onclick="ga('send', 'event', 'button', 'future-customer', 'future-customer')") 
+                      span.c-button__icon.info-icon-link.u-position-relative Request the Whitepaper
+                  small.c-subtext.u-display-block We're working hard on the Whitepaper! When it's ready we'll send it your way.
                 //- SUCCESS MESSAGE
                 if success == true
                   .notice-success.u-text-align-center.u-margin-top-md
@@ -31,46 +33,47 @@ block content
                       Thank you! You'll hear from us when there's more information available.
     
             
-                //- ------
-                //- FORM
-                //- ------
-                form.u-margin-top-lg(method="post" action="/submit" class=(errors)? 'signup-form ibm-column-form form-errors' : 'signup-form ibm-column-form')
-                  div.arrow-down-container.u-margin-bottom-md
-                    div.arrow-down-link.arrow
-                    
-                  //- CUSTOMER NAME
-                  p
-                    label(for="customerName") Name:
-                      span.ibm-required  *
-                    span
-                      input#customerName(type="text" size="40" name="customerName" value=(nameVal == null ? "" : nameVal) class=(errorName == true? 'ibm-field-error' : ''))
-                    if errorName == true
-                      each val in errors
-                        if val.param == "customerName"
-                          span.ibm-item-note.ibm-alert-link #{val.msg}.
-                  //- CUSTOMER EMAIL
-                  p
-                    label(for="customerEmail") Email:
-                      span.ibm-required  *
-                    span
-                      input#customerEmail(type="email" size="40" name="customerEmail" value=(emailVal == null ? "" : emailVal) class=(errorEmail == true? 'ibm-field-error' : ''))
-                    if errorEmail == true
-                      each val in errors
-                        if val.param == "customerEmail"
-                          span.ibm-item-note.ibm-alert-link #{val.msg}.
-                  //- CUSTOMER COMPANY
-                  p
-                    label(for="customerCompany") Company Name:
-                    span
-                      input#customerCompany(type="text" size="40" name="customerCompany" value=(companyVal == null ? '' : companyVal))
-                  //- CUSTOMER PHONE
-                  p
-                    label(for="customerPhone") Phone Number:
-                    span
-                      input#customerPhone(type="text" size="40" name="customerPhone" value=(phoneVal == null ? '' : phoneVal))
-                  //- SUBMIT BUTTON
-                  p.u-text-align-center
-                    button.ibm-btn-pri.ibm-btn-blue-50(type="submit", onclick="ga('send', 'event', 'button', 'submit', 'submit-form')") Submit
+            //- ------
+            //- FORM
+            //- ------
+            div.u-horizontal-center.u-display-inline-block
+              form(method="post" action="/submit" class=(errors)? 'signup-form ibm-column-form form-errors' : 'signup-form ibm-column-form')
+                div.arrow-down-container.u-margin-bottom-md
+                  div.arrow-down-link.arrow
+                  
+                //- CUSTOMER NAME
+                p
+                  label(for="customerName") Full Name:
+                    span.ibm-required  *
+                  span
+                    input#customerName(type="text" name="customerName" value=(nameVal == null ? "" : nameVal) class=(errorName == true? 'ibm-field-error' : ''))
+                  if errorName == true
+                    each val in errors
+                      if val.param == "customerName"
+                        span.ibm-item-note.ibm-alert-link #{val.msg}.
+                //- CUSTOMER EMAIL
+                p
+                  label(for="customerEmail") Email:
+                    span.ibm-required  *
+                  span
+                    input#customerEmail(type="email" name="customerEmail" value=(emailVal == null ? "" : emailVal) class=(errorEmail == true? 'ibm-field-error' : ''))
+                  if errorEmail == true
+                    each val in errors
+                      if val.param == "customerEmail"
+                        span.ibm-item-note.ibm-alert-link #{val.msg}.
+                //- CUSTOMER COMPANY
+                p
+                  label(for="customerCompany") Company Name:
+                  span
+                    input#customerCompany(type="text" name="customerCompany" value=(companyVal == null ? '' : companyVal))
+                //- CUSTOMER PHONE
+                p
+                  label(for="customerPhone") Phone Number:
+                  span
+                    input#customerPhone(type="text" name="customerPhone" value=(phoneVal == null ? '' : phoneVal))
+                //- SUBMIT BUTTON
+                p.u-text-align-center
+                  button.ibm-btn-pri.ibm-btn-blue-50(type="submit", onclick="ga('send', 'event', 'button', 'submit', 'submit-form')") Submit
 
 
     //FOOTER_BEGIN

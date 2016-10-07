@@ -1,4 +1,9 @@
 $ibm-blue: #4178be;
+$unit: 8px;
+$subunit: $unit/2;
+* {
+    // box-sizing: border-box;
+  }
 
 html, body {
   margin: 0;
@@ -6,6 +11,8 @@ html, body {
   height: 100%;
   width: 100%;
 }
+
+
 
 .c-arrange {
   display: flex;
@@ -29,7 +36,7 @@ html, body {
 
 .c-background {
   background: url(../images/hero.png) no-repeat;
-  background-position: 0% 30%;
+  background-position: 47% 32%;
   background-size: cover;
   position: absolute;
   height: 100%;
@@ -62,6 +69,11 @@ body {
 
 p {
   -webkit-font-smoothing: antialiased;
+}
+
+.c-input {
+  max-width: 150px !important;
+  width: 100%;
 }
 
 .c-button {
@@ -138,7 +150,14 @@ p {
 }
 
 .c-section {
-  width: 50%;
+  max-width: 850px;
+
+  &.c--contain {
+
+  }
+  &.c--half {
+    width: 50%;
+  }
 }
 
 .c-tint {
@@ -169,6 +188,10 @@ p {
   text-decoration: none;
 }
 
+.c-subtext {
+  font-size: 13px;
+}
+
 .c-icon {
   color: #23527c;
 
@@ -196,7 +219,7 @@ p {
   }
 
   &.c--1 {
-    font-size: 32px;
+    font-size: 3rem;
   }
 }
 
@@ -228,6 +251,9 @@ p {
   margin: 16px;
 }
 
+.u-margin-bottom-xs {
+  margin-bottom: $subunit;
+}
 .u-margin-bottom-sm {
   margin-bottom: 8px;
 }
@@ -287,6 +313,12 @@ p {
   position: absolute;
 }
 
+.u-horizontal-center {
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
 .u-text-white {
   color: #fff;
 }
@@ -303,8 +335,16 @@ p {
   font-family: 'EB Garamond', serif;
 }
 
+.u-font-helvetica-bold {
+  font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", "HelvBoldIBM", Arial, sans-serif !important;
+}
+
 .u-display-block {
   display: block !important;
+}
+
+.u-display-inline-block {
+  display: inline-block !important;
 }
 
 .u-visually-hidden {

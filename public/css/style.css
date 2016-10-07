@@ -20,8 +20,21 @@
   margin-bottom: 5px;
 }
 
-*[class*="ibm-btn-"]::before {
-  left: .4em;
+*[class*="ibm-btn-"] span::before {
+  left: -1.0em;
+}
+
+.t-column-2-1 {
+  max-width: 400px;
+}
+
+.ibm-ind-link {
+  padding-bottom: 0 !important;
+}
+
+.ibm-required {
+  left: auto !important;
+  opacity: 1;
 }
 
 html, body {
@@ -53,7 +66,7 @@ html, body {
 
 .c-background {
   background: url(../images/hero.png) no-repeat;
-  background-position: 0% 30%;
+  background-position: 47% 32%;
   background-size: cover;
   position: absolute;
   height: 100%;
@@ -85,6 +98,11 @@ body {
 
 p {
   -webkit-font-smoothing: antialiased;
+}
+
+.c-input {
+  max-width: 150px !important;
+  width: 100%;
 }
 
 .c-button {
@@ -159,6 +177,10 @@ p {
 }
 
 .c-section {
+  max-width: 850px;
+}
+
+.c-section.c--half {
   width: 50%;
 }
 
@@ -186,6 +208,10 @@ p {
 
 .c-button:hover {
   text-decoration: none;
+}
+
+.c-subtext {
+  font-size: 13px;
 }
 
 .c-icon {
@@ -216,7 +242,7 @@ p {
 }
 
 .c-heading.c--1 {
-  font-size: 32px;
+  font-size: 3rem;
 }
 
 .c-container {
@@ -244,6 +270,10 @@ p {
 
 .u-margin-md {
   margin: 16px;
+}
+
+.u-margin-bottom-xs {
+  margin-bottom: 4px;
 }
 
 .u-margin-bottom-sm {
@@ -304,6 +334,12 @@ p {
   position: absolute;
 }
 
+.u-horizontal-center {
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
 .u-text-white {
   color: #fff;
 }
@@ -320,8 +356,16 @@ p {
   font-family: 'EB Garamond', serif;
 }
 
+.u-font-helvetica-bold {
+  font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", "HelvBoldIBM", Arial, sans-serif !important;
+}
+
 .u-display-block {
   display: block !important;
+}
+
+.u-display-inline-block {
+  display: inline-block !important;
 }
 
 .u-visually-hidden {
