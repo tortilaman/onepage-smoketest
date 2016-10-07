@@ -14,7 +14,7 @@ router.get('/', function(req,res,next) {
     req.session.success = false;
   }
   req.session.iterator += 1;
-  console.log("Success is: "+req.session.success);
+  console.log("Success is: "+req.session.success+", iterator value is: "+req.session.iterator);
   //Sending all flag values to the template
   res.render('index', {
     title: 'IBM My Learning',
