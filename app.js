@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expressValidator =  require('express-validator');
 var expressSession = require('express-session');
+var fileStore = require('session-file-store')(expressSession);
 
 var routes = require('./routes/index');
 
@@ -24,7 +25,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(expressSession({secret: 'MyLearning-IBM', saveUninitialized: false, resave: false}));
+app.use(expressSession({
+  store: new fileStore(),
+  secret: 'MyLearning-IBM',
+  saveUninitialized: false,
+  resave: false
+}));
 
 app.use('/', routes);
 
