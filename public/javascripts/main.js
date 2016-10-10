@@ -10,7 +10,7 @@ $(document).ready(function() {
       scrollTop: form.offset().top
     }, 1000);
   }
-  
+
   // if the success notice is visible
   if ( $( ".notice-success" ).length ) {
     console.log('success notice visible!');
@@ -21,9 +21,6 @@ $(document).ready(function() {
         $('.notice-success').fadeOut();
     }, 5000);
   }
-
-  var form = $('.signup-form'),
-      learnmore = $(' .js-future-customer, .js-learn-more');
 
   learnmore.on('click', function() {
     form.show(600);
