@@ -24,7 +24,7 @@ block content
                   p.u-margin-bottom-xs.ibm-ind-link
                     button.c-button.c--wide.ibm-btn-pri.ibm-btn-blue-50.js-future-customer(href="#/", onclick="ga('send', 'event', 'button', 'future-customer', 'future-customer')") 
                       span.c-button__icon.info-icon-link.u-position-relative Request the Whitepaper
-                  small.c-subtext.u-display-block We're working hard on the Whitepaper! When it's ready we'll send it your way.
+                  small.c-subtext.u-display-block Get more information.
             //- SUCCESS MESSAGE
             if success == true
               .notice-success.u-text-align-center.u-margin-top-md
@@ -39,12 +39,13 @@ block content
             //- ------
             div.signup-form
               h2#ibm-pagetitle-h2.ibm-h2.u-text-align-center Let's Talk
+              h3.u-text-align-center We're working hard on the Whitepaper! When it's ready we'll send it your way.
               form.u-horizontal-center.u-display-inline-block(method="post" action="/submit" novalidate class=(errors)? 'signup-form ibm-column-form form-errors' : 'signup-form ibm-column-form')
-                div.arrow-down-container.u-margin-bottom-md.u-horizontal-center
-                  div.arrow-down-link.arrow
+                div.arrow-down-container.u-margin-bottom-md
+                  div.c-icon.arrow-down-link.arrow
                   
                 //- CUSTOMER NAME
-                p.form-row
+                p.form-row.u-horizontal-center
                   input#customerName.c-input(type="text", required, name="customerName", value=(nameVal == null ? "" : nameVal) class=(errorName == true? 'ibm-field-error' : ''))
                   label(alt="Name", for="customerName", data-placeholder="Full Name*")
                   if errorName == true

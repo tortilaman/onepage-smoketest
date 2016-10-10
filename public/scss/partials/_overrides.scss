@@ -22,6 +22,11 @@
   margin-bottom: 5px;
 }
 
+
+.ibm-item-note {
+  margin-left: 0 !important;
+}
+
 *[class*="ibm-btn-"] span::before {
   left: -1.0em;
 }
