@@ -1,4 +1,5 @@
 $ibm-blue: #4178be;
+$blue-10: #C0E6FF;
 $unit: 8px;
 $subunit: $unit/2;
 * {
@@ -372,6 +373,10 @@ p {
   padding: 0;
 }
 
+.u-background-blue-10 {
+  background-color: $blue-10;
+}
+
 form {
   label {
     // position: relative;
@@ -508,7 +513,7 @@ form {
     }
 
     &:focus,
-    &:valid {
+    &:valid{
       + label[data-placeholder] {
         &:after {
           color: $ibm-blue;
@@ -519,6 +524,27 @@ form {
       }
 
     }
+
+    &:not([value=""]) {
+      + label[data-placeholder] {
+        &:after {
+          color: $ibm-blue;
+          transform: translate(-5%, -180%) scale(0.9, 0.9);
+          background-color:rgba(255,255,255,1);
+        }
+
+      }
+    }
+
+    // &:invalid,{
+    //   + label[data-placeholder] {
+    //     &:after {
+    //       color: $ibm-blue;
+    //       transform: translate(-5%, -180%) scale(0.9, 0.9);
+    //       background-color:rgba(255,255,255,1);
+    //     }
+    //   }
+    // }
 
 
   }
