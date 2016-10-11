@@ -3,15 +3,11 @@ $(document).ready(function() {
       learnmore = $(' .js-future-customer, .js-learn-more'),
       input;
 
-  // when input field's value changes, check to see if it's empty
+  // when input changes, change the value attribute to whatever is inputted in the field
   $('.signup-form input').on('change paste keyup', function() {
     input = $(this);
     inputString = input.val();
-
-    if ( !inputString.length ) {
-      $(input).attr("value", "");
-    }
-
+    $(input).attr("value", inputString);
 
   });
 
