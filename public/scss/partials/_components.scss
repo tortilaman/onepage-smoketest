@@ -198,11 +198,12 @@ p {
 }
 
 .c-icon {
-  color: #23527c;
 
-  &.c--grey {
-    color: #333;
+  &:before {
+    left: auto;
+    position: relative;
   }
+
 }
 
 .c-header-bar {
@@ -448,7 +449,6 @@ form {
 }
 
 .arrow {
-  width: 60px;
   display: block;
   text-align: center;
   line-height:60px;
@@ -535,17 +535,6 @@ form {
 
       }
     }
-
-    // &:invalid,{
-    //   + label[data-placeholder] {
-    //     &:after {
-    //       color: $ibm-blue;
-    //       transform: translate(-5%, -180%) scale(0.9, 0.9);
-    //       background-color:rgba(255,255,255,1);
-    //     }
-    //   }
-    // }
-
 
   }
 
