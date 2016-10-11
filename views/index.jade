@@ -37,7 +37,7 @@ block content
             //- ------
             //- FORM
             //- ------
-            div.signup-form
+            div(class=(errors)? 'signup-form ibm-column-form form-errors' : 'signup-form ibm-column-form')
               h2#ibm-pagetitle-h2.ibm-h2.u-text-align-center Let's Talk
               form.u-horizontal-center.u-display-inline-block(method="post" action="/submit" novalidate class=(errors)? 'signup-form ibm-column-form form-errors' : 'signup-form ibm-column-form')
                 div.arrow-down-container.u-margin-bottom-md.u-horizontal-center

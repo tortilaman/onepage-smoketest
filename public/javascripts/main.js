@@ -1,10 +1,8 @@
-// Handle scroll and show form
-
-
 $(document).ready(function() {
   var form = $('.signup-form'),
       learnmore = $(' .js-future-customer, .js-learn-more');
 
+  //Scroll to form
   function scrollDown() {
     $("html, body").animate({
       scrollTop: form.offset().top
@@ -22,6 +20,7 @@ $(document).ready(function() {
     }, 5000);
   }
 
+  //Show form on click.
   learnmore.on('click', function() {
     form.show(600);
     scrollDown();

@@ -8,13 +8,19 @@ var router = express.Router();
 router.get('/', function(req,res,next) {
   if(req.session.iterator === null) {
     req.session.iterator = 0;
-  } else if(req.session.iterator === 1) {
+    console.log("Initialized the iterator");
+  } else if(req.session.iterator === -1) {
     req.session.success = true;
+    console.log("Set success to true");
   } else {
     req.session.success = false;
+    console.log("Iterator >= 0");
   }
   req.session.iterator += 1;
   console.log("Success is: "+req.session.success+", iterator value is: "+req.session.iterator);
+  // if (req.session.errors !== null) {
+  //   console.log(errors);
+  // }
   //Sending all flag values to the template
   res.render('index', {
     title: 'IBM My Learning',
@@ -78,8 +84,8 @@ router.post('/submit', function(req, res, next) {
     }
   //No errors, send data via email.
   } else {
-    req.session.iterator = 1;
-    console.log("No Errors");
+    req.session.iterator = -1;
+    console.log("No Errors, iterator is: "+req.session.iterator);
     // req.session.errorName = null;
     // req.session.errorEmail = null;
 
@@ -115,7 +121,7 @@ router.post('/submit', function(req, res, next) {
     });
   }
   //Redirect user from '/submit' to '/'.
+  req.session.save();
   res.redirect('/');
 });
-
 module.exports = router;
