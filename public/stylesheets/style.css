@@ -20,6 +20,10 @@
   margin-bottom: 5px;
 }
 
+.ibm-item-note {
+  margin-left: 0 !important;
+}
+
 *[class*="ibm-btn-"] span::before {
   left: -1.0em;
 }
@@ -228,12 +232,9 @@ p {
   font-size: 13px;
 }
 
-.c-icon {
-  color: #23527c;
-}
-
-.c-icon.c--grey {
-  color: #333;
+.c-icon:before {
+  left: auto;
+  position: relative;
 }
 
 .c-header-bar {
@@ -507,7 +508,6 @@ form input[type="submit"]:hover {
 }
 
 .arrow {
-  width: 60px;
   display: block;
   text-align: center;
   line-height: 60px;
@@ -623,7 +623,6 @@ form input[type="submit"]:hover {
 }
 
 .arrow-down-container {
-  width: 20px;
   height: 60px;
 }
 
