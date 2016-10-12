@@ -1,12 +1,12 @@
 $(document).ready(function() {
   var form = $('.signup-form'),
       learnmore = $(' .js-future-customer, .js-learn-more'),
-      submitBtn = $(" .submit-btn");
-      scrollPos = null;
-      cookieArr = document.cookie.split(';');
+      submitBtn = $(" .submit-btn"),
+      scrollPos = null,
+      cookieArr = document.cookie.split(';'),
+      input;
 
   //Find scroll position inside cookieArr and set scrollTop().
-  console.log("Page is loaded");
   for(var i = 0; i < cookieArr.length; i++) {
     var partArr = cookieArr[i].split('=');
     if(cookieArr[i].indexOf("scrollPos") >= 0) {
@@ -14,6 +14,14 @@ $(document).ready(function() {
       $("html, body").scrollTop(partArr[1]);
     }
   }
+
+  // when input changes, change the value attribute to whatever is inputted in the field
+  $('.signup-form input').on('change paste keyup', function() {
+    input = $(this);
+    inputString = input.val();
+    $(input).attr("value", inputString);
+
+  });
 
   //Scroll to form
   function scrollDown() {

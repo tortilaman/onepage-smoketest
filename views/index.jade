@@ -24,7 +24,7 @@ block content
                   p.u-margin-bottom-xs.ibm-ind-link
                     button.c-button.c--wide.ibm-btn-pri.ibm-btn-blue-50.js-future-customer(href="#/", onclick="ga('send', 'event', 'button', 'future-customer', 'future-customer')") 
                       span.c-button__icon.info-icon-link.u-position-relative Request the Whitepaper
-                  small.c-subtext.u-display-block Get more information.
+                  small.c-subtext.u-display-block Get more information
             //- SUCCESS MESSAGE
             if success == true
               .notice-success.u-text-align-center.u-margin-top-md
@@ -47,6 +47,7 @@ block content
                 //- CUSTOMER NAME
                 p.form-row.u-horizontal-center
                   input#customerName.c-input(type="text", required, name="customerName", value=(nameVal == null ? "" : nameVal) class=(errorName == true? 'ibm-field-error' : ''))
+                  
                   label(alt="Name", for="customerName", data-placeholder="Full Name*")
                   if errorName == true
                     each val in errors
