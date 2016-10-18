@@ -62,6 +62,44 @@ $(document).ready(function() {
     document.cookie = "scrollPos=" + scrollPos + "; " + expires + "; path=localhost:3000/ ";
   }
 
+  function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+
+  function validate() {
+    console.log("Validating");
+    var inp = $(this);
+    var bubble = $(this).nextAll('.inputError');
+    var msg = bubble.find('.inputErrorMessage');
+    msg.text("");
+    if(inp.attr("type") == "email") {
+      var email = $("#customerEmail").val();
+      if (!validateEmail(email)) {
+        msg.text("Invalid email address");
+        bubble.show(300);
+        setTimeout( function() {
+          bubble.hide(300);
+        }, 3000);
+      }
+    }
+
+    if(inp.val() === '') {
+      msg.text("This field is required");
+      bubble.show(300);
+      setTimeout( function() {
+        bubble.hide(300);
+      }, 3000);
+    }
+
+    return false;
+  }
+
+  $("#customerEmail, #customerName").on("focusin", function() {
+    $("#customerEmail, #customerName").one("focusout", validate);
+  });
+
+
   $(window).on('scroll', function() {
     window.requestAnimationFrame(function() {
       setCookie();
