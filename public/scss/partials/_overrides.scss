@@ -28,7 +28,7 @@
 }
 
 *[class*="ibm-btn-"] span::before {
-  left: -1.0em;
+  left: -1.3em;
 }
 
 .t-column-2-1 {
@@ -43,4 +43,8 @@
 .ibm-required {
   left: auto !important;
   opacity: 1;
+}
+
+#ibm-leadspace-head {
+  overflow: hidden;
 }

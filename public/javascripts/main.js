@@ -105,4 +105,25 @@ $(document).ready(function() {
       setCookie();
     });
   });
+
+  // Change background image every few seconds
+  setInterval(changeBackground, 10000);
+
+  var current = 0;
+  function changeBackground() {
+    current++;
+    current = current % backgrounds.length;
+    $('.c-background').css('background-image', backgrounds[current]);
+
+  }
+
+
+  var backgrounds = new Array(
+      'url(../images/heroImage02.jpeg)',
+      'url(../images/heroImage01.jpeg)'
+      // 'url(../images/hero.png)'
+  );
+
+  $('.c-background').css('background-image', backgrounds[0]);
+
 });

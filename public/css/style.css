@@ -25,7 +25,7 @@
 }
 
 *[class*="ibm-btn-"] span::before {
-  left: -1.0em;
+  left: -1.3em;
 }
 
 .t-column-2-1 {
@@ -39,6 +39,18 @@
 .ibm-required {
   left: auto !important;
   opacity: 1;
+}
+
+#ibm-leadspace-head {
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "icons-ibm-v8";
+  src: url("../fonts/icons-ibm-v8.eot");
+  src: url("../fonts/icons-ibm-v8.woff") format("woff"), url("../fonts/icons-ibm-v8.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 html, body {
@@ -108,13 +120,16 @@ p.form-row span.inputError::after {
 }
 
 .c-background {
-  background: url(../images/hero.png) no-repeat;
+  background-repeat: no-repeat;
   background-position: 47% 32%;
   background-size: cover;
   position: absolute;
   height: 100%;
   width: 100%;
   z-index: 0;
+  transition: background-image 1s ease-in-out;
+  -moz-transition: background-image 1s ease-in-out;
+  -webkit-transition: background-image 1s ease-in-out;
 }
 
 .c-black-gradient {
@@ -598,6 +613,85 @@ form input[type="submit"]:hover {
   background-color: white;
 }
 
+.c-layer {
+  opacity: 0.5;
+}
+
+#Layer_1 {
+  position: absolute;
+  animation-name: layer1;
+  animation-duration: 14s;
+  animation-iteration-count: infinite;
+  top: 0;
+  right: 0;
+}
+
+#Layer_2 {
+  position: absolute;
+  animation-name: layer2;
+  animation-duration: 24s;
+  animation-iteration-count: infinite;
+  bottom: 0;
+  right: 0;
+}
+
+#Layer_3 {
+  position: absolute;
+  animation-name: layer2;
+  animation-duration: 32s;
+  animation-iteration-count: infinite;
+  bottom: 0;
+  left: 0;
+}
+
+#Layer_4 {
+  position: absolute;
+  animation-name: layer4;
+  animation-duration: 44s;
+  animation-iteration-count: infinite;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+@keyframes layer1 {
+  0% {
+    right: 0;
+  }
+  37.5%, 50% {
+    right: -200px;
+  }
+  85.7%, 100% {
+    right: 0;
+  }
+}
+
+@keyframes layer2 {
+  0%, 87.5%, 100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  37.5%, 50% {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+  }
+}
+
+@keyframes layer4 {
+  0%, 90.9%, 100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  40.9%, 50% {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+  }
+}
+
+.t-section-halfish {
+  width: 53%;
+}
+
 /*# sourceMappingURL=styles.css.map */
 .signup-form {
   display: none;
@@ -618,15 +712,15 @@ form input[type="submit"]:hover {
 }
 
 .bee-icon-link::before {
-  content: '\f10C';
+  content: '\f289';
 }
 
 .info-icon-link::before {
-  content: '\f144';
+  content: '\F2B2';
 }
 
 .arrow-down-link::before {
-  content: '\f117';
+  content: '\F2F8';
   font-size: 1.5rem;
 }
 
