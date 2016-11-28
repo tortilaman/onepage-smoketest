@@ -729,6 +729,6 @@ form input[type="submit"]:hover {
 }
 
 .confirm-circle-link::before {
-  content: '\f123';
+  content: '\F29C';
   position: relative;
 }

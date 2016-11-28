@@ -45,11 +45,11 @@ block content
                   div.c-icon.arrow-down-link.arrow
                   
                 //- CUSTOMER NAME
-                p.form-row.u-horizontal-center
+                p.form-row
                   input#customerName.c-input(type="text", required, name="customerName", value=(nameVal == null ? "" : nameVal) class=(errorName == true? 'ibm-field-error' : ''))
+                  label(alt="Name", for="customerName", data-placeholder="Full Name*")
                   span.inputError
                     span.inputErrorMessage Sorry, that's an invalid email.
-                  label(alt="Name", for="customerName", data-placeholder="Full Name*")
                   if errorName == true
                     each val in errors
                       if val.param == "customerName"
